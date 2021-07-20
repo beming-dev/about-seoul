@@ -1,0 +1,67 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../images/background/home_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .content {
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    margin-bottom: 20px;
+
+    .title {
+      font-weight: bold;
+      font-size: 72px;
+      line-height: 160%;
+      color: #ffb800;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 160%;
+      margin-bottom: 28px;
+    }
+
+    .icons {
+      display: flex;
+      margin-bottom: 78px;
+
+      button {
+        width: 163px;
+        height: 43px;
+        border: 2px solid white;
+        background: transparent;
+        border-radius: 36px;
+        color: white;
+        font-size: 18px;
+        line-height: 139%;
+        margin-right: 15px;
+        transition-duration: 0.5s;
+      }
+
+      button:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .bookmark-out {
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        background-color: #ffb800;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
