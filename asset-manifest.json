@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/about-seoul/static/css/main.2f26322f.chunk.css",
+    "main.css": "/about-seoul/static/css/main.37f25333.chunk.css",
     "main.js": "/about-seoul/static/js/main.cbaee3d6.chunk.js",
     "main.js.map": "/about-seoul/static/js/main.cbaee3d6.chunk.js.map",
     "runtime-main.js": "/about-seoul/static/js/runtime-main.351249c3.js",
@@ -8,14 +8,14 @@
     "static/js/2.99e6c1a0.chunk.js": "/about-seoul/static/js/2.99e6c1a0.chunk.js",
     "static/js/2.99e6c1a0.chunk.js.map": "/about-seoul/static/js/2.99e6c1a0.chunk.js.map",
     "index.html": "/about-seoul/index.html",
-    "static/css/main.2f26322f.chunk.css.map": "/about-seoul/static/css/main.2f26322f.chunk.css.map",
+    "static/css/main.37f25333.chunk.css.map": "/about-seoul/static/css/main.37f25333.chunk.css.map",
     "static/js/2.99e6c1a0.chunk.js.LICENSE.txt": "/about-seoul/static/js/2.99e6c1a0.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/about-seoul/static/media/home_bg.65570db7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.351249c3.js",
     "static/js/2.99e6c1a0.chunk.js",
-    "static/css/main.2f26322f.chunk.css",
+    "static/css/main.37f25333.chunk.css",
     "static/js/main.cbaee3d6.chunk.js"
   ]
 }
