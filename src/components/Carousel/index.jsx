@@ -7,14 +7,37 @@ const Carousel = () => {
   const instruction = useRef();
   const structure = useRef();
   const location = useRef();
+  let clicking = false;
   const refs = [useRef(), useRef(), useRef(), useRef(), useRef()];
   const text = [
-    { structure: "Lotte Tower", location: "Songpa-Gu" },
     { structure: "N Seoul Tower", location: "Yongsan-Gu" },
-    { structure: "01", location: "Songpa-Gu" },
-    { structure: "02", location: "Yongsan-Gu" },
-    { structure: "03", location: "Yongsan-Gu" },
+    { structure: "Gyeongbokgung", location: "Jongno-gu" },
+    { structure: "DDP", location: "Jung-gu" },
+    { structure: "The Hyundai Seoul", location: "Yeongdeungpo-gu" },
+    { structure: "Lotte Tower", location: "Songpa-Gu" },
   ];
+
+  const onCarousel = (cmd) => {
+    if (!clicking) {
+      clicking = true;
+      for (let i = 0; i < refs.length; i++) {
+        let no = refs[i].current.dataset.no;
+        refs[i].current.classList.remove(`img-0${no}`);
+        no = parseInt(no);
+        if (cmd === "prev") {
+          if (no + 1 > refs.length) no = 1;
+          else no += 1;
+        } else {
+          if (no - 1 < 1) no = refs.length;
+          else no -= 1;
+        }
+        refs[i].current.dataset.no = no;
+        refs[i].current.classList.add(`img-0${refs[i].current.dataset.no}`);
+      }
+      setText(5 - refs[3].current.dataset.no);
+      setBar();
+    }
+  };
 
   const setText = (no) => {
     instruction.current.style.display = "none";
@@ -22,38 +45,13 @@ const Carousel = () => {
       structure.current.innerText = text[no].structure;
       location.current.innerText = text[no].location;
       instruction.current.style.display = "flex";
+      clicking = false;
     }, 500);
-  };
-
-  const onNext = () => {
-    for (let i = 0; i < refs.length; i++) {
-      let no = refs[i].current.dataset.no;
-      setText(no - 1);
-      refs[i].current.classList.remove(`img-0${no}`);
-      if (no - 1 < 1) no = refs.length;
-      else no -= 1;
-      refs[i].current.dataset.no = no;
-      refs[i].current.classList.add(`img-0${refs[i].current.dataset.no}`);
-    }
-    setBar();
-  };
-  const onPrev = () => {
-    for (let i = 0; i < refs.length; i++) {
-      let no = refs[i].current.dataset.no;
-      setText(no - 1);
-      refs[i].current.classList.remove(`img-0${no}`);
-      no = parseInt(no);
-      if (no + 1 > refs.length) no = 1;
-      else no += 1;
-      refs[i].current.dataset.no = no;
-      refs[i].current.classList.add(`img-0${refs[i].current.dataset.no}`);
-    }
-    setBar();
   };
 
   const setBar = () => {
     bar.current.style.width = `${
-      (slider.current.offsetWidth * refs[1].current.dataset.no) / 5
+      (slider.current.offsetWidth * (6 - refs[3].current.dataset.no)) / 5
     }px`;
   };
 
@@ -98,10 +96,10 @@ const Carousel = () => {
         />
         <div className="instruction" ref={instruction}>
           <span className="structure" ref={structure}>
-            N Seoul Tower
+            Gyeongbokgung
           </span>
           <span className="location" ref={location}>
-            Yongsan-Gu
+            Jongno-gu
           </span>
         </div>
       </div>
@@ -115,13 +113,13 @@ const Carousel = () => {
           src="images/icons/prev.png"
           alt="prev"
           className="prev btn"
-          onClick={onPrev}
+          onClick={() => onCarousel("prev")}
         />
         <img
           src="images/icons/next.png"
           alt="next"
           className="next btn"
-          onClick={onNext}
+          onClick={() => onCarousel("next")}
         />
       </div>
     </div>
