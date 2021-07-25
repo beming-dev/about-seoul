@@ -9,7 +9,7 @@ const AppRouter = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/history">
+        <Route exact path="/history">
           <History />
         </Route>
       </Switch>

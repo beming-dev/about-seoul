@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom"
 import Search from "../Search";
 import "./style.scss";
 
@@ -8,12 +9,12 @@ const Navigation = () => {
   return (
     <div className="Navigation">
       {search ? <Search setSearch={setSearch} /> : <></>}
-      <img src="images/icons/logo.png" alt="logo" className="logo" />
+      <a href="/about-seoul"><img src="images/icons/logo.png" alt="logo" className="logo" /></a>
       <ul className="navList">
-        <li>History</li>
-        <li>News</li>
-        <li>Visitors</li>
-        <li>Community</li>
+        <Link to="/history"><li>History</li></Link>
+        <Link to="/news"><li>News</li></Link>
+        <Link to="/visitors"><li>Visitors</li></Link>
+        <Link to="/community"><li>Community</li></Link>
       </ul>
       <div className="icons">
         <img
