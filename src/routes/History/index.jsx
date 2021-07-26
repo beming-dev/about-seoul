@@ -2,6 +2,7 @@ import "./style.scss";
 import Navigation from "../../components/Navigation";
 import React, { useRef, useEffect } from "react";
 import Footer from "../../components/Footer";
+import Scroll from "../../components/Scroll";
 
 const History = () => {
   const slide = useRef();
@@ -35,6 +36,8 @@ const History = () => {
 
   return (
     <div className="history" ref={history}>
+      <Scroll />
+
       <Navigation />
       <div className="content content-01">
         <span className="title">History of Seoul</span>
