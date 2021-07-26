@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import Search from "../Search";
 import "./style.scss";
 
@@ -7,14 +7,24 @@ const Navigation = () => {
   const [search, setSearch] = useState(false);
 
   return (
-    <div className="Navigation">
+    <nav className="Navigation">
       {search ? <Search setSearch={setSearch} /> : <></>}
-      <a href="/about-seoul"><img src="images/icons/logo.png" alt="logo" className="logo" /></a>
+      <a href="/about-seoul">
+        <img src="images/icons/logo.png" alt="logo" className="logo" />
+      </a>
       <ul className="navList">
-        <Link to="/history"><li>History</li></Link>
-        <Link to="/news"><li>News</li></Link>
-        <Link to="/visitors"><li>Visitors</li></Link>
-        <Link to="/community"><li>Community</li></Link>
+        <Link to="/history">
+          <li>History</li>
+        </Link>
+        <Link to="/news">
+          <li>News</li>
+        </Link>
+        <Link to="/visitors">
+          <li>Visitors</li>
+        </Link>
+        <Link to="/community">
+          <li>Community</li>
+        </Link>
       </ul>
       <div className="icons">
         <img
@@ -24,7 +34,7 @@ const Navigation = () => {
         />
         <img src="images/icons/my.png" alt="my" />
       </div>
-    </div>
+    </nav>
   );
 };
 
