@@ -5,27 +5,34 @@ import React, {useRef, useEffect} from "react";
 const History = () => {
   const slide = useRef();
   const imgLeft = useRef();
+  const imgRight = useRef();
+  const container = useRef();
+  const history = useRef();
   let isClick = false;
 
   useEffect(() => {
-    slide.current.addEventListener('mousedown', () => {
+    slide.current.addEventListener('mousedown', (e) => {
+      e.preventDefault();
       isClick = true;
     });
 
-    slide.current.addEventListener('mousemove', (e) => {
+    history.current.addEventListener('mousemove', (e) => {
       if(isClick){
-        slide.current.style.left = `${e.offsetX}px`;
-        
+        let pos = e.pageX - container.current.getBoundingClientRect().left - 5;
+        if(pos < 0) pos = 0;
+        else if(pos >= imgRight.current.width)  pos = imgRight.current.width;
+        slide.current.style.left = `${pos}px`;
+        imgLeft.current.style.width = `${pos}px`;
       }
     });
 
-    slide.current.addEventListener('mouseup', () => {
+    history.current.addEventListener('mouseup', () => {
       isClick = false;
     });
   }, [])
 
   return (
-    <div className = "history">
+    <div className = "history" ref={history}>
       <Navigation/>
       <div className="content content-01">
         <span className="title">History of Seoul</span>
@@ -66,12 +73,12 @@ const History = () => {
       <div className="content content-04">
           <span className="date">October 2015</span>
           <span className="title">Seoul celebrated the 10th year of <br/>Cheonggyecheon Restoration Project</span>
-          <div className="container">
+          <div className="container" ref={container}>
             <img src="images/src/history_03.png" alt="left" className="img left" ref={imgLeft}/>
             <div className="slider" ref={slide}>
-              <img src="images/icons/slide.png" alt="slide" />
+              <img src="images/icons/slide.png" alt="slide" className="slide"/>
             </div>
-            <img src="images/src/history_04.png" alt="right" className="img right" />
+            <img src="images/src/history_04.png" alt="right" className="img right" ref={imgRight}/>
             <span className="description">
               The first chapter of the Cheonggyecheon restoration finished in 2005.
               Although some people argue that the project was conducted in an
