@@ -12,26 +12,36 @@ const History = () => {
   const history = useRef();
   let isClick = false;
 
+  const onMouseDown = (e) => {
+    e.preventDefault();
+    isClick = true;
+  }
+
+  const onMouseMove = (e) => {
+    if (isClick) {
+      let pos = e.pageX - container.current.getBoundingClientRect().left - 5;
+      if (pos < 0) pos = 0;
+      else if (pos >= imgRight.current.width - 5)
+        pos = imgRight.current.width - 5;
+      slide.current.style.left = `${pos}px`;
+      imgLeft.current.style.width = `${pos}px`;
+    }
+  };
+
+  const onMouseUp = () => {
+    isClick = false;
+  }
+
   useEffect(() => {
-    slide.current.addEventListener("mousedown", (e) => {
-      e.preventDefault();
-      isClick = true;
-    });
+    slide.current.addEventListener("mousedown", onMouseDown);
+    history.current.addEventListener("mousemove", onMouseMove);
+    history.current.addEventListener("mouseup", onMouseUp);
 
-    history.current.addEventListener("mousemove", (e) => {
-      if (isClick) {
-        let pos = e.pageX - container.current.getBoundingClientRect().left - 5;
-        if (pos < 0) pos = 0;
-        else if (pos >= imgRight.current.width - 5)
-          pos = imgRight.current.width - 5;
-        slide.current.style.left = `${pos}px`;
-        imgLeft.current.style.width = `${pos}px`;
-      }
-    });
-
-    history.current.addEventListener("mouseup", () => {
-      isClick = false;
-    });
+    return () => {
+      slide.current.removeEventListener("mousedown", onMouseDown);
+      history.current.removeEventListener("mousemove", onMouseMove);
+      history.current.removeEventListener("mouseup", onMouseUp);
+    }
   }, []);
 
   return (
