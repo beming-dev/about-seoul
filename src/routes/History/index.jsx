@@ -15,7 +15,7 @@ const History = () => {
   const onMouseDown = (e) => {
     e.preventDefault();
     isClick = true;
-  }
+  };
 
   const onMouseMove = (e) => {
     if (isClick) {
@@ -30,18 +30,20 @@ const History = () => {
 
   const onMouseUp = () => {
     isClick = false;
-  }
+  };
 
   useEffect(() => {
-    slide.current.addEventListener("mousedown", onMouseDown);
-    history.current.addEventListener("mousemove", onMouseMove);
-    history.current.addEventListener("mouseup", onMouseUp);
+    let mSlide = slide.current;
+    let mHistory = history.current;
+    mSlide.addEventListener("mousedown", onMouseDown);
+    mHistory.addEventListener("mousemove", onMouseMove);
+    mHistory.addEventListener("mouseup", onMouseUp);
 
     return () => {
-      slide.current.removeEventListener("mousedown", onMouseDown);
-      history.current.removeEventListener("mousemove", onMouseMove);
-      history.current.removeEventListener("mouseup", onMouseUp);
-    }
+      mSlide.removeEventListener("mousedown", onMouseDown);
+      mHistory.removeEventListener("mousemove", onMouseMove);
+      mHistory.removeEventListener("mouseup", onMouseUp);
+    };
   }, []);
 
   return (

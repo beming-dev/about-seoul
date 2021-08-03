@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./style.scss";
 
 const dataList = [
@@ -56,7 +56,7 @@ const Carousel = () => {
           const className = `img-card img-0${currentIndex}`;
           return (
             <div className={className}>
-              <img src={img}></img>
+              <img src={img} alt="no"></img>
               <div
                 className="instruction"
                 style={{ opacity: isSelected ? 1 : 0 }}

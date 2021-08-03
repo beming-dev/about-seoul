@@ -3,14 +3,18 @@ import { Link } from "react-router-dom";
 import Search from "../Search";
 import "./style.scss";
 
-const Navigation = () => {
+const Navigation = ({ black }) => {
   const [search, setSearch] = useState(false);
 
   return (
     <nav className="Navigation">
       {search ? <Search setSearch={setSearch} /> : <></>}
       <a href="/about-seoul">
-        <img src="images/icons/logo.png" alt="logo" className="logo" />
+        <img
+          src={black ? "images/icons/logo_b.png" : "images/icons/logo.png"}
+          alt="logo"
+          className="logo"
+        />
       </a>
       <ul className="navList">
         <Link to="/history">
@@ -28,11 +32,14 @@ const Navigation = () => {
       </ul>
       <div className="icons">
         <img
-          src="images/icons/search.png"
+          src={black ? "images/icons/search_b.png" : "images/icons/search.png"}
           alt="search"
           onClick={() => setSearch(true)}
         />
-        <img src="images/icons/my.png" alt="my" />
+        <img
+          src={black ? "images/icons/my_b.png" : "images/icons/my.png"}
+          alt="my"
+        />
       </div>
     </nav>
   );
