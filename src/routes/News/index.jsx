@@ -1,6 +1,32 @@
+import { useState } from "react";
+
 import ArticleCard from "../../components/ArticleCard";
 import Navigation from "../../components/Navigation";
+import ReporterCard from "../../components/ReporterCard";
+import VideoCard from "../../components/VideoCard";
+import Footer from "../../components/Footer";
 import "./style.scss";
+
+const reporterInfo = [
+  {
+    face: "profile_01.png",
+    name: "Leslie Alexander",
+    about:
+      "There is a figure who played a decisive role to promote the fierce independence movement of Korea and the brutality of Japan on March 1, 1919. It is Albert Wilder Taylor...",
+  },
+  {
+    face: "profile_02.png",
+    name: "Marvin McKinney",
+    about:
+      "A large number of relics from the Joseon dynasty have been excavated during construction work at Gwanghwamun Square. In particular, locations of major administrative offices of...",
+  },
+  {
+    face: "profile_03.png",
+    name: "Marvin McKinney",
+    about:
+      "There is a figure who played a decisive role to promote the fierce independence movement of Korea and the brutality of Japan on March 1, 1919. It is Albert Wilder Taylor...",
+  },
+];
 
 const articleInfo = [
   {
@@ -29,7 +55,31 @@ const articleInfo = [
   },
 ];
 
+const videoInfo = [
+  {
+    title: `Seoul Opens Additional 2.5Km Section on Gyeongchun Line Forest`,
+    watch: "29,624",
+    comment: "1,580",
+    length: "24:53",
+  },
+  {
+    title: "Yongsan Shopping Center to Rise as “Digital Maker City”",
+    watch: "21,637",
+    comment: "1,101",
+    length: "12:32",
+  },
+  {
+    title:
+      "Second Extension of Eased Eligibility Criteria for Seoul-type Urgent Welfare",
+    watch: "10,451",
+    comment: "1,023",
+    length: "16:04",
+  },
+];
+
 const News = () => {
+  const [selectedVideo, setSelectedVideo] = useState(1);
+
   return (
     <div className="news">
       <Navigation black={true} />
@@ -79,8 +129,10 @@ const News = () => {
           <div className="inner"></div>
         </div>
         <div className="cards">
-          {articleInfo.map((info) => (
+          {articleInfo.map((info, i) => (
             <ArticleCard
+              id={i}
+              key={i}
               img={info.img}
               title={info.title}
               description={info.description}
@@ -94,18 +146,66 @@ const News = () => {
         <span className="latest-video">Latest Video</span>
         <div className="divider"></div>
         <div className="video-box">
-          <iframe
-            title="seoul"
-            width="45%"
-            height="100%"
-            src="https://youtu.be/f8GPs4Pmlvo?autoplay=1&mute=1"
-            frameborder="0"
-          ></iframe>
-          <div className="list"></div>
+          <video src="images/video/lotteTower.mp4" controls></video>
+          <div className="list">
+            {videoInfo.map((info, i) => (
+              <VideoCard
+                id={i}
+                key={i}
+                title={info.title}
+                watch={info.watch}
+                comment={info.comment}
+                length={info.length}
+                selected={i === selectedVideo ? true : false}
+                setSelected={setSelectedVideo}
+              />
+            ))}
+          </div>
         </div>
       </div>
-      <div className="content-04 content"></div>
-      <div className="content-05 content"></div>
+      <div className="content-04 content">
+        <div className="head">
+          <span className="citizen-reporter">Citizen Reporter</span>
+          <div className="buttons">
+            <button className="prev">
+              <img src="images/icons/prev2.png" alt="prev" />
+            </button>
+            <button className="next">
+              <img src="images/icons/next2.png" alt="next" />
+            </button>
+          </div>
+        </div>
+        <div className="divider">
+          <div className="inner"></div>
+        </div>
+        <div className="reporter-box">
+          {reporterInfo.map((info, index) => (
+            <ReporterCard
+              key={index}
+              id={index}
+              face={info.face}
+              name={info.name}
+              about={info.about}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="content-05 content">
+        <img
+          src="images/src/subscribe.png"
+          alt="subscribe"
+          className="subscribe-img"
+        />
+        <span className="subscribe">Subscribe</span>
+        <span className="subscribe-ex">
+          Sign up with your email address
+          <br />
+          to receive news and updates.
+        </span>
+        <input type="text" placeholder="Email address" />
+        <img src="images/icons/send.png" alt="send" className="send" />
+      </div>
+      <Footer />
     </div>
   );
 };

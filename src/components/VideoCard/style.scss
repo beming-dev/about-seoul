@@ -1,0 +1,39 @@
+.video-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 90%;
+  height: 33.33%;
+  padding: 0 5%;
+
+  .title {
+    width: 70%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    .wc {
+      display: flex;
+      width: 28.8%;
+      justify-content: space-between;
+    }
+    span {
+      font-size: 12px;
+      line-height: 15px;
+      color: #ffffff;
+    }
+  }
+}
+
+.video-card:hover {
+  background: #121920;
+}
+
+.selected {
+  background-color: black;
+}
