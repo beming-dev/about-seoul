@@ -10,7 +10,6 @@ const VideoCard = ({
   id,
 }) => {
   const onClick = () => {
-    console.log(id);
     setSelected(id);
   };
   return (

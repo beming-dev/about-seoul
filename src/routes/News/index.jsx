@@ -6,79 +6,33 @@ import ReporterCard from "../../components/ReporterCard";
 import VideoCard from "../../components/VideoCard";
 import Footer from "../../components/Footer";
 import "./style.scss";
-
-const reporterInfo = [
-  {
-    face: "profile_01.png",
-    name: "Leslie Alexander",
-    about:
-      "There is a figure who played a decisive role to promote the fierce independence movement of Korea and the brutality of Japan on March 1, 1919. It is Albert Wilder Taylor...",
-  },
-  {
-    face: "profile_02.png",
-    name: "Marvin McKinney",
-    about:
-      "A large number of relics from the Joseon dynasty have been excavated during construction work at Gwanghwamun Square. In particular, locations of major administrative offices of...",
-  },
-  {
-    face: "profile_03.png",
-    name: "Marvin McKinney",
-    about:
-      "There is a figure who played a decisive role to promote the fierce independence movement of Korea and the brutality of Japan on March 1, 1919. It is Albert Wilder Taylor...",
-  },
-];
-
-const articleInfo = [
-  {
-    img: "news_02.png",
-    title: "Seoul Introduces the Aged Infrastructure Forecasting",
-    description:
-      "The Seoul Metropolitan Government will implement the Seoul Infrastructure Next 100 Year Project to prepare for the...",
-    date: "Dec 24, 2021",
-    watch: "59,235",
-  },
-  {
-    img: "news_03.png",
-    title: "Music Festival in Hanok with 11 Different Pieces of Music",
-    description:
-      "This festival took place online for everyone’s safety and citizens who couldn’t go to music festivals this year due to COVID-19...",
-    date: "Dec 23, 2021",
-    watch: "31,621",
-  },
-  {
-    img: "news_04.png",
-    title: "Seoul Applies Universal Design to Public Restrooms",
-    description:
-      "The Seoul Metropolitan Government (SMG) will apply universal design to restrooms in Seoul to ensure the safe and convenient...",
-    date: "Dec 23, 2021",
-    watch: "19,824",
-  },
-];
-
-const videoInfo = [
-  {
-    title: `Seoul Opens Additional 2.5Km Section on Gyeongchun Line Forest`,
-    watch: "29,624",
-    comment: "1,580",
-    length: "24:53",
-  },
-  {
-    title: "Yongsan Shopping Center to Rise as “Digital Maker City”",
-    watch: "21,637",
-    comment: "1,101",
-    length: "12:32",
-  },
-  {
-    title:
-      "Second Extension of Eased Eligibility Criteria for Seoul-type Urgent Welfare",
-    watch: "10,451",
-    comment: "1,023",
-    length: "16:04",
-  },
-];
+import { videoInfo, articleInfo, reporterInfo, articleCategory } from "./info";
 
 const News = () => {
   const [selectedVideo, setSelectedVideo] = useState(1);
+  const [reporter, setReporter] = useState(0);
+  const [category, setCategory] = useState(0);
+
+  const N = reporterInfo.length;
+  const onReporterClick = (pos) => () => {
+    if (pos === "prev") {
+      if (reporter + 1 > 0) setReporter(0);
+      else setReporter(reporter + 1);
+    } else {
+      if (reporter - 1 < -N + 1) setReporter(-N + 1);
+      else setReporter(reporter - 1);
+    }
+  };
+  const onCategoryClick = (pos) => () => {
+    if (pos === "next") {
+      if (category + 1 > articleCategory.length - 1)
+        setCategory(articleCategory.length - 1);
+      else setCategory(category + 1);
+    } else {
+      if (category - 1 < 0) setCategory(0);
+      else setCategory(category - 1);
+    }
+  };
 
   return (
     <div className="news">
@@ -110,16 +64,14 @@ const News = () => {
         <div className="head">
           <span className="latest-article">Latest Articles</span>
           <ul className="category">
-            <li className="chosen">All</li>
-            <li>City</li>
-            <li>Urban Planning</li>
-            <li>Economy</li>
-            <li>Traffic </li>
+            {articleCategory.map((item, i) => {
+              return <li class={i === category ? "chosen" : ""}>{item}</li>;
+            })}
             <div className="buttons">
-              <button className="prev">
+              <button className="prev" onClick={onCategoryClick("prev")}>
                 <img src="images/icons/prev2.png" alt="prev" />
               </button>
-              <button className="next">
+              <button className="next" onClick={onCategoryClick("next")}>
                 <img src="images/icons/next2.png" alt="next" />
               </button>
             </div>
@@ -167,22 +119,25 @@ const News = () => {
         <div className="head">
           <span className="citizen-reporter">Citizen Reporter</span>
           <div className="buttons">
-            <button className="prev">
+            <button className="prev" onClick={onReporterClick("prev")}>
               <img src="images/icons/prev2.png" alt="prev" />
             </button>
-            <button className="next">
+            <button className="next" onClick={onReporterClick("next")}>
               <img src="images/icons/next2.png" alt="next" />
             </button>
           </div>
         </div>
         <div className="divider">
-          <div className="inner"></div>
+          <div
+            className="inner"
+            style={{ width: 100 - (100 / N) * (reporter + 2) + "%" }}
+          ></div>
         </div>
         <div className="reporter-box">
           {reporterInfo.map((info, index) => (
             <ReporterCard
               key={index}
-              id={index}
+              id={reporter + index}
               face={info.face}
               name={info.name}
               about={info.about}
