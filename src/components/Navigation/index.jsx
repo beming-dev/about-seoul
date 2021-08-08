@@ -23,8 +23,8 @@ const Navigation = ({ black }) => {
         <Link to="/news">
           <li>News</li>
         </Link>
-        <Link to="/visitors">
-          <li>Visitors</li>
+        <Link to="/discover">
+          <li>Discover</li>
         </Link>
         <Link to="/community">
           <li>Community</li>

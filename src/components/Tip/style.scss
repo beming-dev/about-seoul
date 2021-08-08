@@ -1,0 +1,103 @@
+.tip {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .tip-img {
+    position: absolute;
+    top: 0;
+  }
+
+  .cover {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      #19222c 0%,
+      #000000 0.01%,
+      rgba(0, 0, 0, 0) 48.96%
+    );
+    border-radius: 15px;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+
+  .txt-01 {
+    z-index: 2;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .txt-02,
+  .txt-03,
+  .txt-04 {
+    z-index: 2;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 128%;
+  }
+
+  .txt-01,
+  .txt-02,
+  .txt-03,
+  .txt-04 {
+    width: 80%;
+    margin-bottom: 12px;
+    position: absolute;
+    bottom: 64px;
+  }
+
+  .txt {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .txt-03,
+  .txt-04 {
+    width: 60%;
+    padding-right: 17%;
+  }
+
+  .profile {
+    width: 80%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 28px;
+
+    .dot {
+      margin: 0 5px;
+    }
+  }
+
+  .txt-01,
+  .profile-01,
+  .txt-02,
+  .profile-02 {
+    width: 90%;
+  }
+}
+
+.tip-01 {
+  width: 576px;
+  height: 561px;
+}
+
+.tip-02 {
+  width: 576px;
+  height: 270px;
+}
+
+.tip-03,
+.tip-04 {
+  width: 276px;
+  height: 270px;
+}
