@@ -1,0 +1,46 @@
+.popular-post {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  padding: 20px 0;
+
+  .left-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 31px;
+  }
+
+  .conf {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .title {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 145%;
+      text-align: left;
+    }
+
+    .about {
+      display: flex;
+      font-size: 12px;
+      line-height: 15px;
+      color: #999999;
+
+      img {
+        margin-right: 4px;
+      }
+      .bar {
+        margin: 0 9px;
+      }
+    }
+  }
+}
+
+.popular-01,
+.popular-02,
+.popular-03 {
+  border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+}

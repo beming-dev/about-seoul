@@ -103,4 +103,232 @@
       }
     }
   }
+
+  .content-03 {
+    height: 525px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 160%;
+      text-align: center;
+      color: #393939;
+    }
+
+    .description {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 160%;
+      text-align: center;
+      color: #999999;
+      margin-bottom: 45px;
+    }
+    .members {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .ad {
+    width: 1176px;
+    height: 176px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px 0;
+
+    .txt-01 {
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 32px;
+      z-index: 10;
+      margin-bottom: 10px;
+      margin-left: 76px;
+    }
+    .txt-02 {
+      font-size: 20px;
+      line-height: 180%;
+      z-index: 10;
+      margin-left: 76px;
+    }
+    .back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    .phone-01,
+    .phone-02 {
+      width: 11.14%;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .phone-01 {
+      left: 811px;
+      top: 40px;
+    }
+    .phone-02 {
+      left: 949px;
+      bottom: 0;
+    }
+  }
+
+  .content-04 {
+    height: 730px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #393939;
+
+    .title {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 160%;
+      text-align: center;
+    }
+
+    .description {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 160%;
+      text-align: center;
+      color: #999999;
+      margin-bottom: 45px;
+    }
+
+    .posts {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        width: 726px;
+        height: 607px;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border-radius: 15px;
+
+        .bottom {
+          width: 85.4%;
+          padding: 0 7.3%;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          .txt-01 {
+            width: 85%;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 140%;
+            color: #000000;
+          }
+
+          .txt-02 {
+            font-size: 16px;
+            line-height: 19px;
+            color: #999999;
+          }
+
+          .about {
+            display: flex;
+            align-items: center;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            color: #999999;
+
+            .name {
+              margin-left: 13px;
+            }
+
+            .dot {
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+
+      .right {
+        width: 348px;
+        height: 607px;
+        padding: 0 39px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: white;
+
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+
+          button {
+            width: 47.4%;
+            height: 45px;
+            border-radius: 40px;
+          }
+
+          .btn-popular {
+            background: linear-gradient(
+              90deg,
+              #ffd951 -23.15%,
+              #ff8056 98.08%,
+              #ff5858 151.85%
+            );
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+            color: #ffffff;
+            transition-duration: 1s;
+          }
+
+          .btn-recent {
+            border: 1.3px solid #999999;
+            box-sizing: border-box;
+            border-radius: 40px;
+            font-size: 16px;
+            line-height: 140%;
+            color: #999999;
+            background: white;
+            transition-duration: 1s;
+          }
+
+          .btn-popular:hover {
+            background: white;
+            border: 1px solid #ff8056;
+            color: #ff8056;
+          }
+
+          .btn-recent:hover {
+            background: #999999;
+            color: white;
+          }
+        }
+
+        .post {
+          height: 490px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+
+      .post {
+        width: 100%;
+        height: 446px;
+      }
+    }
+  }
 }
