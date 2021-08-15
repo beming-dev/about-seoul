@@ -5,6 +5,8 @@ import History from "../routes/History";
 import Discover from "../routes/Discover";
 import Home from "../routes/Home";
 import News from "../routes/News";
+import SignIn from "../routes/SignIn";
+import SignUp from "../routes/SignUp";
 
 const AppRouter = () => {
   return (
@@ -24,6 +26,12 @@ const AppRouter = () => {
         </Route>
         <Route exact path="/community">
           <Community />
+        </Route>
+        <Route exact path="/signin">
+          <SignIn />
+        </Route>
+        <Route exact path="/signup">
+          <SignUp />
         </Route>
       </Switch>
     </Router>
