@@ -65,7 +65,7 @@ const News = () => {
           <span className="latest-article">Latest Articles</span>
           <ul className="category">
             {articleCategory.map((item, i) => {
-              return <li class={i === category ? "chosen" : ""}>{item}</li>;
+              return <li className={i === category ? "chosen" : ""}>{item}</li>;
             })}
             <div className="buttons">
               <button className="prev" onClick={onCategoryClick("prev")}>

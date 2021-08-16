@@ -55,7 +55,8 @@ const Carousel = () => {
           const currentIndex = ((i - selected + 1 + N) % N) + 1;
           const className = `img-card img-0${currentIndex}`;
           return (
-            <div className={className}>
+            <div className={className} key={i}>
+              <div className={`cover cover-0${currentIndex}`}></div>
               <img src={img} alt="no"></img>
               <div
                 className="instruction"

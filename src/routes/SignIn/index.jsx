@@ -10,8 +10,8 @@ const SignIn = () => {
         <span className="title">Welcome Back</span>
         <span className="description">Sign in with your email account</span>
 
-        <div class="right">
-          <div class="form">
+        <div className="right">
+          <div className="form">
             <label for="email">Email</label>
             <input type="email" id="email" />
             <label for="password">Password</label>

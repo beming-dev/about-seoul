@@ -7,8 +7,10 @@ const Discover = () => {
   // let wheeling = false;
   const discover = useRef();
   const [curNum, setCurNum] = useState(0);
+  const [curCat, setCurCat] = useState(0);
 
   let numList = ["01", "02", "03", "04", "05", "06", "07", "08", "09"];
+  let category = ["Overview", "Map", "Reviews", "Ticket"];
   let N = numList.length;
   const [using, setUsing] = useState(false);
 
@@ -61,10 +63,17 @@ const Discover = () => {
             </span>
             <div className="attraction">
               <div className="categories">
-                <li>Overview</li>
-                <li>Map</li>
-                <li>Reviews</li>
-                <li>Ticket</li>
+                {category.map((item, i) => (
+                  <li
+                    key={i}
+                    onClick={() => {
+                      setCurCat(i);
+                    }}
+                    className={i === curCat ? "chosen" : ""}
+                  >
+                    {item}
+                  </li>
+                ))}
               </div>
               <div className="main">
                 <div className="instruction">
