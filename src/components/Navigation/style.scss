@@ -31,9 +31,38 @@
     display: flex;
     justify-content: space-between;
 
-    img {
-      width: 30px;
-      height: 30px;
+    .logging-container {
+      position: relative;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .clicked {
+        height: 100px !important;
+        display: flex !important;
+      }
+
+      .log-box {
+        display: none;
+        width: 100px;
+        height: 0;
+        position: absolute;
+        top: 40px;
+        left: -110%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background: white;
+        border-radius: 10px;
+        transition-duration: 1s;
+
+        span {
+          font-weight: 700;
+          color: black;
+        }
+      }
     }
   }
 }

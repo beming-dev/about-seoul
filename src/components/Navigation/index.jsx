@@ -5,6 +5,7 @@ import "./style.scss";
 
 const Navigation = ({ black }) => {
   const [search, setSearch] = useState(false);
+  const [clicked, setClicked] = useState(false);
 
   return (
     <nav className="Navigation">
@@ -36,10 +37,23 @@ const Navigation = ({ black }) => {
           alt="search"
           onClick={() => setSearch(true)}
         />
-        <img
-          src={black ? "images/icons/my_b.png" : "images/icons/my.png"}
-          alt="my"
-        />
+        <div className="logging-container">
+          <img
+            src={black ? "images/icons/my_b.png" : "images/icons/my.png"}
+            alt="my"
+            onClick={() => {
+              setClicked(!clicked);
+            }}
+          />
+          <div className={clicked ? `log-box clicked` : `log-box`}>
+            <Link to="/signin">
+              <span>Sign-in</span>
+            </Link>
+            <Link to="/signup">
+              <span>Sign-up</span>
+            </Link>
+          </div>
+        </div>
       </div>
     </nav>
   );
