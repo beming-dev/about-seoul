@@ -1,5 +1,6 @@
 .discover {
   width: 100vw;
+  height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -7,4 +8,203 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  overflow: hidden;
+
+  .bg {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .bg-cover {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .content {
+    z-index: 10;
+    display: flex;
+    flex: 1;
+    align-items: center;
+
+    .left {
+      position: relative;
+      margin-right: 180px;
+
+      .line {
+        width: 200px;
+      }
+
+      .num {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 160%;
+        transition-duration: 0.7s;
+      }
+
+      .num-01 {
+        left: 250px;
+        top: 235px;
+        color: #ffb800;
+      }
+
+      //
+      .num-09 {
+        left: 220px;
+        top: 100px;
+        color: rgba(255, 255, 255, 0.6);
+        transform: rotate(-22.5deg);
+      }
+
+      .num-02 {
+        color: rgba(255, 255, 255, 0.6);
+        left: 220px;
+        top: 365px;
+        transform: rotate(22.5deg);
+      }
+
+      //
+      .num-08 {
+        left: 160px;
+        top: -30px;
+        color: rgba(255, 255, 255, 0.3);
+        transform: rotate(-45deg);
+      }
+
+      .num-03 {
+        left: 160px;
+        top: 495px;
+        color: rgba(255, 255, 255, 0.3);
+        transform: rotate(45deg);
+      }
+
+      //
+      .num-07 {
+        left: -30px;
+        top: -120px;
+        opacity: 0;
+      }
+
+      .num-04 {
+        left: -30px;
+        top: 585px;
+        opacity: 0;
+      }
+
+      //
+      .num-06 {
+        left: -130px;
+        top: -30px;
+        opacity: 0;
+      }
+
+      .num-05 {
+        left: -130px;
+        top: 495px;
+        opacity: 0;
+      }
+    }
+
+    .right {
+      width: 1200px;
+      height: 729px;
+      position: relative;
+
+      .container {
+        transition-duration: 1s;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #999999;
+      }
+
+      .title {
+        color: white;
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 160%;
+      }
+
+      .description {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 160%;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 33px;
+      }
+
+      .attraction {
+        width: 100%;
+        height: 618px;
+        background: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .categories {
+          margin-top: 27px;
+          margin-bottom: 73px;
+          width: 100%;
+          display: flex;
+          padding: 14px 0;
+          justify-content: space-evenly;
+          border-bottom: 2px solid rgba(153, 153, 153, 0.2);
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 174%;
+        }
+
+        .main {
+          padding: 0 89px;
+          display: flex;
+          justify-content: space-between;
+
+          .instruction {
+            width: 349px;
+            height: 323px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .name {
+              width: 80%;
+              font-weight: bold;
+              font-size: 36px;
+              line-height: 44px;
+              color: #393939;
+              margin-bottom: 18px;
+            }
+
+            .user {
+              display: flex;
+              align-items: center;
+              margin-bottom: 18px;
+
+              .star {
+                margin-right: 6px;
+              }
+
+              .bookmark {
+                margin-left: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
