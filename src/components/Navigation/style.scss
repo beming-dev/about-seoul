@@ -21,7 +21,7 @@
     li {
       font-style: normal;
       font-weight: 500;
-      font-size: 20px;
+      font-size: 2rem;
       line-height: 24px;
     }
   }
@@ -63,6 +63,37 @@
           color: black;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .Navigation {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Navigation {
+    width: 90%;
+
+    .logo {
+      width: 90px;
+    }
+
+    .icons {
+      width: 100px;
+      position: relative;
+
+      img {
+        width: 25px !important;
+        height: 25px !important;
+      }
+    }
+
+    .navList {
+      min-width: 0;
+      padding: 0;
     }
   }
 }
