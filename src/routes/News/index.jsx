@@ -38,6 +38,7 @@ const News = () => {
     <div className="news">
       <Navigation black={true} />
       <div className="content-01 content">
+        <div className="cover"></div>
         <div className="left">
           <div className="txt-box">
             <span className="txt-01">Urban Planning News</span>
@@ -50,10 +51,10 @@ const News = () => {
               lifestyle...
             </span>
             <div className="post-info">
-              <img src="images/icons/clock.png" alt="clock" />
+              <div className="clock"></div>
               <span className="txt-04 date">Dec 25, 2021</span>
               <span className="txt-04 bar">|</span>
-              <img src="images/icons/watch.png" alt="watch" />
+              <div className="watch"></div>
               <span className="txt-04">19,627</span>
             </div>
           </div>
@@ -95,23 +96,25 @@ const News = () => {
         </div>
       </div>
       <div className="content-03 content">
-        <span className="latest-video">Latest Video</span>
-        <div className="divider"></div>
-        <div className="video-box">
-          <video src="images/video/lotteTower.mp4" controls></video>
-          <div className="list">
-            {videoInfo.map((info, i) => (
-              <VideoCard
-                id={i}
-                key={i}
-                title={info.title}
-                watch={info.watch}
-                comment={info.comment}
-                length={info.length}
-                selected={i === selectedVideo ? true : false}
-                setSelected={setSelectedVideo}
-              />
-            ))}
+        <div className="grid">
+          <span className="latest-video">Latest Video</span>
+          <div className="divider"></div>
+          <div className="video-box">
+            <video src="images/video/lotteTower.mp4" controls></video>
+            <div className="list">
+              {videoInfo.map((info, i) => (
+                <VideoCard
+                  id={i}
+                  key={i}
+                  title={info.title}
+                  watch={info.watch}
+                  comment={info.comment}
+                  length={info.length}
+                  selected={i === selectedVideo ? true : false}
+                  setSelected={setSelectedVideo}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -126,6 +129,7 @@ const News = () => {
               <img src="images/icons/next2.png" alt="next" />
             </button>
           </div>
+          <span className="view">View all</span>
         </div>
         <div className="divider">
           <div
@@ -141,6 +145,7 @@ const News = () => {
               face={info.face}
               name={info.name}
               about={info.about}
+              mAbout={info.mAbout}
             />
           ))}
         </div>

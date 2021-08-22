@@ -36,28 +36,31 @@
 }
 
 @media (max-width: 1200px) {
-  .about {
-    margin-left: 8% !important;
-  }
-  .copyright {
-    margin-right: 8% !important;
+  .Footer {
+    .about {
+      margin-left: 8% !important;
+    }
+    .copyright {
+      margin-right: 8% !important;
+    }
   }
 }
 
 @media (max-width: 1024px) {
-  .about {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5% !important;
-  }
-  .copyright {
-    margin-right: 5% !important;
-  }
-
-  .icons {
-    width: 90px !important;
-    img {
-      height: 20px;
+  .Footer {
+    .about {
+      display: flex;
+      flex-direction: column;
+      margin-left: 5% !important;
+    }
+    .copyright {
+      margin-right: 5% !important;
+    }
+    .icons {
+      width: 90px !important;
+      img {
+        height: 20px;
+      }
     }
   }
 }

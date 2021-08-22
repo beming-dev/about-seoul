@@ -4,18 +4,24 @@ export const reporterInfo = [
     name: "Leslie Alexander",
     about:
       "There is a figure who played a decisive role to promote the fierce independence movement of Korea and the brutality of Japan on March 1, 1919. It is Albert Wilder Taylor...",
+    mAbout:
+      "There is a figure who played a role to promote the fierce independence...",
   },
   {
     face: "profile_02.png",
     name: "Marvin McKinney",
     about:
       "A large number of relics from the Joseon dynasty have been excavated during construction work at Gwanghwamun Square. In particular, locations of major administrative offices of...",
+    mAbout:
+      "A large number of relics have been excavated during construction work...",
   },
   {
     face: "profile_03.png",
     name: "Marvin McKinney",
     about:
       "There is a figure who played a decisive role to promote the fierce independence movement of Korea and the brutality of Japan on March 1, 1919. It is Albert Wilder Taylor...",
+    mAbout:
+      "2021 F/W Seoul Fashion Week held online recorded 4.72 million views...",
   },
 ];
 

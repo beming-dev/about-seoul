@@ -53,7 +53,7 @@ const Carousel = () => {
         {dataList.map(({ img, structure, location }, i) => {
           const isSelected = selected === i;
           const currentIndex = ((i - selected + 1 + N) % N) + 1;
-          const className = `img-card img-0${currentIndex}`;
+          const className = `img-card img-0${currentIndex} item-0${i}`;
           return (
             <div className={className} key={i}>
               <div className={`cover cover-0${currentIndex}`}></div>
@@ -69,6 +69,19 @@ const Carousel = () => {
           );
         })}
       </div>
+      <div className="slide-box">
+        <div className="mobile-images">
+          {dataList.map(({ img, structure }, i) => (
+            <div className="mobile-image-box" key={i}>
+              <div className="cover">
+                <span>{structure}</span>
+              </div>
+              <img src={img} alt="no"></img>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="controller">
         <span className="start">01</span>
         <div className="slider">

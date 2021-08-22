@@ -1,8 +1,35 @@
 import Navigation from "../../components/Navigation";
 import "./style.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const SignIn = () => {
+  const [offset, setOffset] = useState(0);
+  const [dashArray, setDashArray] = useState("415 1650");
+
+  let style = {
+    strokeDasharray: dashArray,
+    strokeDashoffset: offset,
+  };
+
+  let btnStyle = {
+    border: "2.5px solid rgba(153, 153, 153, 0.3)",
+  };
+
+  const onEmailClick = () => {
+    setOffset(0);
+    setDashArray("415 1650");
+  };
+
+  const onPWClick = () => {
+    setOffset(-559);
+    setDashArray("415 1650");
+  };
+  const onSubmitClick = () => {
+    setOffset(-1154);
+    setDashArray("925 1650");
+  };
+
   return (
     <div className="sign-in">
       <Navigation />
@@ -10,7 +37,7 @@ const SignIn = () => {
         <span className="title">Welcome Back</span>
         <span className="description">Sign in with your email account</span>
         <div className="right">
-          <svg viewBox="-5 -65 460 301">
+          <svg viewBox="0 -65 510 333">
             <defs>
               <linearGradient
                 id="linearGradient"
@@ -25,16 +52,33 @@ const SignIn = () => {
               </linearGradient>
             </defs>
             <path
-              d="M582.27,252.79c-8.4-10.86-20.37-16.6-34.61-16.6h-410a2.5,2.5,0,0,0,0,5h410c28.17,0,41,24.63,41,47.5,0,12.55-3.67,24.22-10.35,32.85a37.51,37.51,0,0,1-30.65,14.89H163.56l-.33,0c-13.67.37-25.18,6.55-33.32,18-7.35,10.32-11.4,24.16-11.4,39s4,28.67,11.4,39c7.14,10,16.87,16,28.39,17.59l.77.11.28,0a34.16,34.16,0,0,0,4.31.28h350a33.75,33.75,0,0,0,0-67.5h-350a33.73,33.73,0,0,0-32.87,41.39c-4.91-9.17-7.28-20.24-7.28-30.9,0-13.62,3.68-26.29,10.35-35.66,7.42-10.41,18-16.31,30.65-16.31v0H547.87a42.37,42.37,0,0,0,34.4-16.82c7.34-9.51,11.39-22.26,11.39-35.91S589.61,262.29,582.27,252.79ZM163.66,387.94h350a28.75,28.75,0,0,1,0,57.5h-5.75l-.28,0H164.51a39.41,39.41,0,0,1-6.65-.56,28.75,28.75,0,0,1,5.8-56.91Z"
-              transform="translate(-118.51 -236.19)"
+              d="M145.83,125.39h412.5c58,0,58,100,0,100H145.65c-58,0-58,110,0,110H524.39s24.22-.29,30.05-23.22a31.5,31.5,0,0,0-.13-16.44c-2.42-8.42-9.21-20.67-28.29-22.94a27.5,27.5,0,0,0-3.28-.17H174.39s-18.26-.43-27.42,14.79a31.32,31.32,0,0,0-3.44,22.25c2.2,11.14,9.33,21.83,26.36,25.14"
+              transform="translate(-99.65 -122.89)"
+              style={style}
             />
           </svg>
           <div className="form">
             <label for="email">Email</label>
-            <input className="email" type="email" id="email" />
+            <input
+              className="email"
+              type="email"
+              id="email"
+              onFocus={onEmailClick}
+            />
             <label for="password">Password</label>
-            <input className="password" type="password" id="password" />
-            <input type="submit" id="submit" value="Submit" />
+            <input
+              className="password"
+              type="password"
+              id="password"
+              onFocus={onPWClick}
+            />
+            <input
+              type="submit"
+              id="submit"
+              value="Submit"
+              onFocus={onSubmitClick}
+              style={offset !== -1154 ? btnStyle : style}
+            />
           </div>
         </div>
 

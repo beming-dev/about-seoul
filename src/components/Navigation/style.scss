@@ -59,11 +59,16 @@
         transition-duration: 1s;
 
         span {
+          font-size: 17px;
           font-weight: 700;
           color: black;
         }
       }
     }
+  }
+
+  .hamburger {
+    display: none;
   }
 }
 
@@ -94,6 +99,27 @@
     .navList {
       min-width: 0;
       padding: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Navigation {
+    margin-top: 40px;
+    .search {
+      display: none;
+    }
+    .navList {
+      display: none;
+    }
+    .icons {
+      display: none;
+    }
+
+    .hamburger {
+      width: 25px;
+      height: 23px;
+      display: block;
     }
   }
 }

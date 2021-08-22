@@ -36,7 +36,7 @@
 
     .title {
       font-weight: bold;
-      font-size: 72px;
+      font-size: 7.2rem;
       line-height: 160%;
       color: #ffb800;
       margin-bottom: 8px;
@@ -44,7 +44,7 @@
 
     .description {
       font-weight: 300;
-      font-size: 20px;
+      font-size: 2rem;
       line-height: 160%;
       margin-bottom: 28px;
     }
@@ -60,7 +60,7 @@
         background: transparent;
         border-radius: 36px;
         color: white;
-        font-size: 18px;
+        font-size: 1.8rem;
         line-height: 139%;
         margin-right: 15px;
         transition-duration: 0.5s;
@@ -80,6 +80,33 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .home {
+    .icons {
+      button {
+        width: 122px !important;
+        height: 33px !important;
+      }
+
+      .bookmark-out {
+        width: 33px !important;
+        height: 33px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    .content {
+      .title {
+        line-height: 100%;
+        margin-bottom: 20px;
       }
     }
   }

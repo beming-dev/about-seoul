@@ -35,12 +35,11 @@
     }
 
     #submit {
-      width: 415px;
-      height: 65px;
+      width: 407px;
+      height: 58px;
       border-radius: 46px;
-      border: 2.5px solid rgba(153, 153, 153, 0.3);
       background: white;
-      margin-top: 44px;
+      margin-top: 49px;
       margin-bottom: 25px;
 
       font-weight: 600;
@@ -66,12 +65,10 @@
         width: 130px;
         height: 40px;
         border-radius: 35px;
-        border: 1.5px solid #e0e0e0;
         background: white;
         display: flex;
         justify-content: center;
         align-items: center;
-
         font-weight: 600;
         font-size: 14px;
         line-height: 17px;
@@ -93,7 +90,7 @@
   }
 
   .right {
-    width: 460px;
+    width: 500px;
     color: #f1f1f2;
   }
 
@@ -105,33 +102,39 @@
   }
   svg {
     position: absolute;
-    width: 460px;
+    width: 510px;
 
     path {
       position: relative;
       fill: none;
       stroke: url(#linearGradient);
-      stroke-width: 6;
+      stroke-width: 4;
+      transition-duration: 0.8s;
     }
   }
 
   .form {
+    position: relative;
+    z-index: 100;
     display: flex;
+    justify-self: center;
     flex-direction: column;
     align-items: center;
 
     label {
+      width: 410px;
+      height: 16px;
+      padding-left: 5px;
       color: rgba(57, 57, 57, 0.8);
       display: block;
       font-weight: 600;
       font-size: 20px;
       line-height: 24px;
-      height: 16px;
-      width: 415px;
     }
     input {
-      width: 415px;
+      width: 410px;
       height: 30px;
+      padding-left: 5px;
       padding: 10px 0;
       font-weight: 300;
       font-size: 18px;
@@ -140,11 +143,15 @@
       background: transparent;
       border: 0;
       outline: none !important;
+    }
+
+    .password {
       border-bottom: 3px solid rgba(153, 153, 153, 0.3);
     }
 
     .email {
-      margin-bottom: 29px;
+      margin-bottom: 30px;
+      border-bottom: 3px solid rgba(153, 153, 153, 0.3);
     }
   }
 
@@ -155,11 +162,5 @@
     color: #707075;
     margin-top: 40px;
     transition: color 300ms;
-  }
-  #submit:focus {
-    color: #f2f2f2;
-  }
-  #submit:active {
-    color: #d0d0d2;
   }
 }

@@ -20,7 +20,6 @@
   }
 
   .content-01 {
-    width: 1500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,21 +28,21 @@
 
     .txt-01 {
       font-weight: 500;
-      font-size: 30px;
+      font-size: 3rem;
       line-height: 160%;
       color: #ffb800;
     }
     .txt-02 {
       width: 509px;
       font-weight: bold;
-      font-size: 64px;
+      font-size: 6.4rem;
       line-height: 130%;
       margin-bottom: 12px;
     }
 
     .txt-03 {
       width: 486px;
-      font-size: 18px;
+      font-size: 1.8rem;
       line-height: 170%;
     }
 
@@ -64,14 +63,14 @@
 
     .title {
       font-weight: bold;
-      font-size: 32px;
+      font-size: 3.2rem;
       line-height: 160%;
       color: #393939;
     }
 
     .description {
       font-weight: 300;
-      font-size: 18px;
+      font-size: 1.8rem;
       line-height: 160%;
       text-align: center;
       color: #999999;
@@ -109,7 +108,7 @@
 
     .title {
       font-weight: bold;
-      font-size: 30px;
+      font-size: 3rem;
       line-height: 160%;
       text-align: center;
       color: #393939;
@@ -117,7 +116,7 @@
 
     .description {
       font-weight: 300;
-      font-size: 20px;
+      font-size: 2rem;
       line-height: 160%;
       text-align: center;
       color: #999999;
@@ -141,14 +140,14 @@
 
     .txt-01 {
       font-weight: bold;
-      font-size: 35px;
+      font-size: 3.5rem;
       line-height: 32px;
       z-index: 10;
       margin-bottom: 10px;
       margin-left: 76px;
     }
     .txt-02 {
-      font-size: 20px;
+      font-size: 2rem;
       line-height: 180%;
       z-index: 10;
       margin-left: 76px;
@@ -187,14 +186,14 @@
 
     .title {
       font-weight: bold;
-      font-size: 32px;
+      font-size: 3.2rem;
       line-height: 160%;
       text-align: center;
     }
 
     .description {
       font-weight: 300;
-      font-size: 18px;
+      font-size: 1.8rem;
       line-height: 160%;
       text-align: center;
       color: #999999;
@@ -225,13 +224,13 @@
           .txt-01 {
             width: 85%;
             font-weight: 600;
-            font-size: 30px;
+            font-size: 3rem;
             line-height: 140%;
             color: #000000;
           }
 
           .txt-02 {
-            font-size: 16px;
+            font-size: 1.6rem;
             line-height: 19px;
             color: #999999;
           }
@@ -240,7 +239,7 @@
             display: flex;
             align-items: center;
             font-weight: 300;
-            font-size: 18px;
+            font-size: 1.8rem;
             line-height: 22px;
             color: #999999;
 
@@ -285,7 +284,7 @@
             );
             border-radius: 40px;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 1.6rem;
             line-height: 140%;
             color: #ffffff;
             transition-duration: 1s;
@@ -295,7 +294,7 @@
             border: 1.3px solid #999999;
             box-sizing: border-box;
             border-radius: 40px;
-            font-size: 16px;
+            font-size: 1.6rem;
             line-height: 140%;
             color: #999999;
             background: white;

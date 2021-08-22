@@ -101,22 +101,24 @@ const History = () => {
           Cheonggyecheon Restoration Project
         </span>
         <div className="container" ref={container}>
-          <div className="left-container" ref={imgLeft}>
+          <div className="slide-con">
+            <div className="left-container" ref={imgLeft}>
+              <img
+                src="images/src/history_03.png"
+                alt="left"
+                className="img left"
+              />
+            </div>
+            <div className="slider" ref={slide}>
+              <img src="images/icons/slide.png" alt="slide" className="slide" />
+            </div>
             <img
-              src="images/src/history_03.png"
-              alt="left"
-              className="img left"
+              src="images/src/history_04.png"
+              alt="right"
+              className="img right"
+              ref={imgRight}
             />
           </div>
-          <div className="slider" ref={slide}>
-            <img src="images/icons/slide.png" alt="slide" className="slide" />
-          </div>
-          <img
-            src="images/src/history_04.png"
-            alt="right"
-            className="img right"
-            ref={imgRight}
-          />
           <span className="description">
             The first chapter of the Cheonggyecheon restoration finished in
             2005. Although some people argue that the project was conducted in

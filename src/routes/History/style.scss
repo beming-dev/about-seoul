@@ -22,20 +22,20 @@
 
   .date {
     font-weight: bold;
-    font-size: 21px;
+    font-size: 2.1rem;
     line-height: 25px;
     color: #ffc700;
   }
 
   .title {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 4rem;
     line-height: 130%;
   }
 
   .description {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 180%;
     color: rgba(255, 255, 255, 0.6);
   }
@@ -48,7 +48,7 @@
 
     .title {
       font-weight: 800;
-      font-size: 60px;
+      font-size: 6rem;
       line-height: 73px;
     }
 
@@ -62,37 +62,37 @@
 
     .description {
       font-weight: normal;
-      font-size: 20px;
+      font-size: 2rem;
       line-height: 38px;
     }
   }
 
   .content-02 {
-    min-height: 641px;
     position: relative;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
+    margin-top: 30%;
 
     .background-text {
       position: absolute;
-      top: 0;
+      top: -70%;
       left: 0;
       font-weight: bold;
-      font-size: 380px;
+      font-size: 38rem;
       line-height: 120%;
       color: rgba(255, 255, 255, 0.1);
     }
 
     .left {
-      width: 462px;
-      height: 321px;
+      width: 38.5%;
+      height: 26.75%;
       margin-bottom: 52px;
       margin-left: 72px;
     }
 
     .right {
-      width: 575px;
+      width: 47.9%;
       height: 385px;
       position: relative;
       display: flex;
@@ -142,9 +142,9 @@
     }
 
     .intro {
-      width: 420px;
+      width: 35%;
       margin-right: 62px;
-      height: 300px;
+      height: 25%;
     }
   }
 
@@ -163,16 +163,21 @@
 
     .container {
       width: 100%;
-      height: 385px;
+      height: 65.5%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
       position: relative;
 
-      .img {
+      .slide-con {
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
+      }
+
+      .img {
         width: 573px;
         height: 385px;
         border-radius: 20px;
@@ -210,14 +215,213 @@
           width: 50px;
           height: 50px;
           position: relative;
-          top: 170px;
-          left: -22px;
+          top: 42%;
+          left: -260%;
         }
       }
 
       .description {
-        width: 555px;
-        height: 327px;
+        width: 46.25%;
+        height: 85%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .history {
+    .content {
+      width: 960px;
+    }
+    .mouse-scroll {
+      display: none;
+    }
+
+    .content-02 {
+      .background-text {
+        left: -5%;
+        top: -80%;
+      }
+      .left {
+        margin: 0 !important;
+      }
+      .right {
+        height: 310px;
+      }
+    }
+
+    .content-03 {
+      min-height: 400px;
+    }
+
+    .content-04 {
+      .container {
+        .img {
+          width: 460px;
+          height: 308px;
+        }
+
+        .slider {
+          height: 308px;
+        }
+
+        .description {
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .history {
+    .content {
+      width: 730px;
+    }
+
+    .content-02 {
+      margin-top: 300px;
+      .background-text {
+        top: -70%;
+      }
+
+      .left {
+        width: 45%;
+      }
+      .right {
+        height: 245px;
+      }
+    }
+
+    .content-03 {
+      min-height: 300px;
+      margin: 150px 0;
+      .intro {
+        margin-right: 20px;
+        width: 50%;
+      }
+    }
+
+    .content-04 {
+      .container {
+        .left-container,
+        .slider,
+        .right {
+          margin-top: 20px;
+        }
+
+        .img {
+          width: 368px;
+          height: 242px;
+        }
+
+        .slider {
+          height: 242px;
+        }
+
+        .description {
+          align-self: start;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .history {
+    .content {
+      width: 340px;
+    }
+
+    .content-01 {
+      .line {
+        margin: 50px 0;
+      }
+    }
+
+    .content-02 {
+      margin-top: 100px;
+      flex-direction: column;
+      .background-text {
+        display: none;
+      }
+      .intro {
+        width: 100%;
+        align-items: center;
+        .title {
+          text-align: center;
+          margin: 10px 0;
+        }
+      }
+      .right {
+        margin-top: 30px;
+        width: 100%;
+
+        .play {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    .content-03 {
+      .background {
+        width: 100%;
+        min-height: 198px;
+        height: 198px;
+        top: 100px;
+      }
+      .intro {
+        margin: 0;
+        width: 100%;
+        align-items: center;
+
+        span {
+          text-align: center;
+        }
+
+        .title {
+          width: 70%;
+          margin-bottom: 240px;
+          font-size: 3rem;
+        }
+
+        .description {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .content-04 {
+    flex-direction: column;
+    justify-content: unset !important;
+    .title {
+      font-size: 2.6rem;
+      margin: 10px 0 !important;
+    }
+
+    .container {
+      flex-direction: column;
+      justify-content: unset !important;
+
+      .description {
+        width: 100% !important;
+        margin-top: 20px;
+      }
+
+      .img {
+        width: 340px !important;
+        height: 222px !important;
+      }
+      .slider {
+        height: 222px !important;
+      }
+
+      .slide-con {
+        width: 100% !important;
+        position: relative !important;
       }
     }
   }

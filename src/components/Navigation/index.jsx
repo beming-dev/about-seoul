@@ -55,6 +55,11 @@ const Navigation = ({ black }) => {
           </div>
         </div>
       </div>
+      <img
+        src="images/src/hamburger.png"
+        alt="hamburger"
+        className="hamburger"
+      />
     </nav>
   );
 };

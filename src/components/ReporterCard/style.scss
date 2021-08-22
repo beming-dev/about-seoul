@@ -17,22 +17,72 @@
     left: 40px;
   }
 
+  .field {
+    padding: 0 40px;
+  }
+
   .name {
     margin-top: 50px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 120%;
     display: flex;
     align-items: flex-end;
     color: #393939;
     margin-bottom: 13px;
-    padding: 0 40px;
   }
 
   .about {
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 160%;
     color: rgba(0, 0, 0, 0.5);
-    padding: 0 40px;
+  }
+
+  .mAbout {
+    font-size: 1.4rem;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.5);
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reporter-card {
+    width: 450px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .reporter-card {
+    width: 100% !important;
+    height: 95px !important;
+    position: unset !important;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .face {
+      position: unset !important;
+    }
+
+    .field {
+      width: 60%;
+      padding: 0 !important;
+    }
+    .name {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .about {
+      display: none;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .mAbout {
+      display: block !important;
+    }
   }
 }
