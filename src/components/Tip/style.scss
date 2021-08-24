@@ -22,14 +22,14 @@
       #000000 0.01%,
       rgba(0, 0, 0, 0) 48.96%
     );
-    border-radius: 15px;
+    border-radius: 10px;
     transform: matrix(1, 0, 0, -1, 0, 0);
   }
 
   .txt-01 {
     z-index: 2;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 36px;
   }
 
@@ -38,23 +38,24 @@
   .txt-04 {
     z-index: 2;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 128%;
-  }
-
-  .txt-01,
-  .txt-02,
-  .txt-03,
-  .txt-04 {
     width: 80%;
     margin-bottom: 12px;
     position: absolute;
-    bottom: 64px;
+    bottom: 23%;
+  }
+
+  .txt-01 {
+    width: 80%;
+    margin-bottom: 12px;
+    position: absolute;
+    bottom: 12%;
   }
 
   .txt {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 22px;
     color: rgba(255, 255, 255, 0.5);
   }
@@ -71,11 +72,18 @@
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 28px;
+    bottom: 10%;
 
     .dot {
       margin: 0 5px;
     }
+    .person {
+      margin-right: 5px;
+    }
+  }
+
+  .profile-01 {
+    bottom: 4.5%;
   }
 
   .txt-01,
@@ -87,17 +95,54 @@
 }
 
 .tip-01 {
-  width: 576px;
-  height: 561px;
+  width: 100%;
+  height: 100%;
+
+  .tip-img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .tip-02 {
-  width: 576px;
-  height: 270px;
+  width: 100%;
+  height: 100%;
+
+  .tip-img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .tip-03,
 .tip-04 {
-  width: 276px;
-  height: 270px;
+  width: 48%;
+  height: 100%;
+
+  .tip-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tip {
+    .txt-01 {
+      font-size: 2.5rem;
+    }
+    .txt-03,
+    .txt-04 {
+      width: 80% !important;
+      padding: 0 !important;
+    }
+    .profile {
+      .person {
+        width: 22px;
+        height: 22px;
+      }
+      .txt {
+        font-size: 1.4rem;
+      }
+    }
+  }
 }

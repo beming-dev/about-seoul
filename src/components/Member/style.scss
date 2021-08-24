@@ -1,8 +1,8 @@
 .member {
   display: flex;
   flex-direction: column;
-  width: 276px;
-  height: 402px;
+  width: 23%;
+  height: 100%;
   color: black;
   background: white;
   border-radius: 15px;
@@ -15,7 +15,7 @@
 
     .top {
       width: 100%;
-      height: 51px;
+      height: 27%;
       display: flex;
       position: relative;
       justify-content: space-evenly;
@@ -36,13 +36,13 @@
 
         .num {
           font-weight: 600;
-          font-size: 12px;
+          font-size: 1.2rem;
           line-height: 15px;
           color: #393939;
         }
 
         .txt {
-          font-size: 12px;
+          font-size: 1.2rem;
           line-height: 15px;
           color: #999999;
         }
@@ -57,10 +57,10 @@
       flex: 1;
 
       button {
-        width: 128px;
-        height: 36px;
+        width: 46.4%;
+        height: 25%;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 140%;
         background: linear-gradient(
           90deg,
@@ -81,7 +81,7 @@
 
       .name {
         font-weight: 600;
-        font-size: 18px;
+        font-size: 1.8rem;
         line-height: 22px;
         color: #393939;
       }
@@ -90,13 +90,73 @@
         display: flex;
 
         span {
-          font-size: 12px;
+          font-size: 1.2rem;
           line-height: 15px;
           color: #999999;
         }
 
         .posts {
           margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .member {
+    .text {
+      .profile {
+        width: 70px !important;
+        height: 70px !important;
+        top: -15px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .member {
+    .text {
+      .profile {
+        width: 55px !important;
+        height: 55px !important;
+        top: -10px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .member {
+    width: 42% !important;
+    margin-right: 16px;
+
+    .text {
+      .top {
+        .num {
+          display: none;
+        }
+        .txt {
+          display: none;
+        }
+      }
+      .bottom {
+        .photos {
+          display: none;
+        }
+        .name {
+          font-weight: 600 !important;
+          font-size: 14px !important;
+          line-height: 17px !important;
+        }
+        button {
+          width: 55%;
+        }
+        .written {
+          .posts {
+            margin: 0 !important;
+          }
         }
       }
     }

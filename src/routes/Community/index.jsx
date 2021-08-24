@@ -12,28 +12,29 @@ const Community = () => {
   return (
     <div className="community">
       <Navigation />
-      <img
-        src="images/background/community_back.png"
-        alt="bg"
-        className="background-img"
-      />
-      <div className="content-01 content">
-        <span className="txt-01">Discover and share</span>
-        <span className="txt-02">Connect with Fellow Travelers</span>
-        <span className="txt-03">
-          Ask questions. Get information. Discover, share and book authentic
-          experiences. Exclusively for travel in smaller communities &
-          lesser-known places.
-        </span>
-        <div className="details">
-          {detail.map((detail, i) => (
-            <Detail
-              key={i}
-              img={detail.img}
-              name={detail.name}
-              num={detail.num}
-            />
-          ))}
+      <div className="background-img">
+        <div className="content-01 content">
+          <span className="txt-01">Discover and share</span>
+          <span className="txt-02">Connect with Fellow Travelers</span>
+          <span className="txt-03">
+            Ask questions. Get information. Discover, share and book authentic
+            experiences. Exclusively for travel in smaller communities &
+            lesser-known places.
+          </span>
+          <span className="txt-mobile">
+            Ask questions. Get information. Discover, share and book authentic
+            experiences.
+          </span>
+          <div className="details">
+            {detail.map((detail, i) => (
+              <Detail
+                key={i}
+                img={detail.img}
+                name={detail.name}
+                num={detail.num}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
