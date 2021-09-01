@@ -2,6 +2,7 @@ import Navigation from "../../components/Navigation";
 import { useEffect, useRef, useState } from "react";
 import { attractionInfo } from "./info";
 import "./style.scss";
+import Footer from "../../components/Footer";
 
 const Discover = () => {
   // let wheeling = false;
@@ -38,7 +39,7 @@ const Discover = () => {
   });
 
   return (
-    <div className="discover" ref={discover}>
+    <div className="discover">
       <Navigation />
       <img
         src={`images/background/${attractionInfo[curNum].bg}`}
@@ -46,14 +47,16 @@ const Discover = () => {
         className="bg"
       />
       <div className="bg-cover"></div>
-      <div className="content">
+      <div className="content" ref={discover}>
         <div className="left">
           <img src="images/src/wheel.png" alt="line" className="line" />
-          {numList.map((num, i) => (
-            <li key={i} className={`num num-0${((curNum + i) % N) + 1}`}>
-              {num}
-            </li>
-          ))}
+          <div className="num-container">
+            {numList.map((num, i) => (
+              <li key={i} className={`num num-0${((curNum + i) % N) + 1}`}>
+                {num}
+              </li>
+            ))}
+          </div>
         </div>
         <div className="right">
           <div className="container">
@@ -106,6 +109,58 @@ const Discover = () => {
           </div>
         </div>
       </div>
+
+      <div className="mobile-content">
+        <span className="title">Tourist attraction</span>
+        <span className="description">
+          Check out all the hot spots Seoul has to offer
+        </span>
+        {attractionInfo.map((item, i) => {
+          if (i < 3) {
+            return (
+              <div className={`item item-0${i + 1}`} key={i}>
+                <div className="categories">
+                  {category.map((item, i) => (
+                    <li
+                      key={i}
+                      onClick={() => {
+                        setCurCat(i);
+                      }}
+                      className={i === curCat ? "chosen" : ""}
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </div>
+                <img
+                  src={`images/src/${attractionInfo[i].img}`}
+                  alt="bg"
+                  className="item-bg"
+                />
+                <span className="name">{attractionInfo[i].name}</span>
+                <div className="user">
+                  <img
+                    src="images/icons/star.png"
+                    alt="star"
+                    className="star"
+                  />
+                  <span className="rate">{attractionInfo[i].rate}</span>
+                  <span className="reviews">
+                    ({attractionInfo[i].review} reviews)
+                  </span>
+                  <img
+                    src="images/icons/bookmark2.png"
+                    alt="bookmark"
+                    className="bookmark"
+                  />
+                </div>
+                <span className="about">{attractionInfo[i].text_mobile}</span>
+              </div>
+            );
+          }
+        })}
+      </div>
+      <Footer />
     </div>
   );
 };

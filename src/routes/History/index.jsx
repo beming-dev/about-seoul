@@ -10,6 +10,7 @@ const History = () => {
   const imgRight = useRef();
   const container = useRef();
   const history = useRef();
+  const toTop = useRef();
   let isClick = false;
 
   const onMouseDown = (e) => {
@@ -32,17 +33,30 @@ const History = () => {
     isClick = false;
   };
 
+  const onTop = () => {
+    let timeOut;
+    if (
+      document.body.scrollTop !== 0 ||
+      document.documentElement.scrollTop !== 0
+    ) {
+      window.scrollBy(0, -50);
+      timeOut = setTimeout("onTop()", 10);
+    } else clearTimeout(timeOut);
+  };
+
   useEffect(() => {
     let mSlide = slide.current;
     let mHistory = history.current;
     mSlide.addEventListener("mousedown", onMouseDown);
     mHistory.addEventListener("mousemove", onMouseMove);
     mHistory.addEventListener("mouseup", onMouseUp);
+    toTop.current.addEventListener("click", onTop);
 
     return () => {
       mSlide.removeEventListener("mousedown", onMouseDown);
       mHistory.removeEventListener("mousemove", onMouseMove);
       mHistory.removeEventListener("mouseup", onMouseUp);
+      toTop.current.removeEventListener("click", onTop);
     };
   }, []);
 
@@ -135,6 +149,10 @@ const History = () => {
             revitalization of the urban area is still going on today.
           </span>
         </div>
+      </div>
+      <div className="to-top" ref={toTop}>
+        <img src="images/icons/toTop.png" alt="top" />
+        <span className="ex">Back to top</span>
       </div>
       <Footer />
     </div>
