@@ -1,0 +1,183 @@
+.member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 23%;
+  height: 100%;
+  color: black;
+  background: white;
+  border-radius: 15px;
+}
+
+.member .text {
+  width: 100%;
+  height: 196px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.member .text .top {
+  width: 100%;
+  height: 27%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.member .text .top .profile {
+  width: 83px;
+  height: 83px;
+  position: relative;
+  top: -20px;
+}
+
+.member .text .top .followers,
+.member .text .top .following {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.member .text .top .followers .num,
+.member .text .top .following .num {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 15px;
+  color: #393939;
+}
+
+.member .text .top .followers .txt,
+.member .text .top .following .txt {
+  font-size: 1.2rem;
+  line-height: 15px;
+  color: #999999;
+}
+
+.member .text .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.member .text .bottom button {
+  width: 46.4%;
+  height: 25%;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 140%;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-23.15%, #ffd951), color-stop(151.85%, #ff5858), color-stop(98.08%, #ff8056));
+  background: linear-gradient(90deg, #ffd951 -23.15%, #ff5858 151.85%, #ff8056 98.08%);
+  border-radius: 40px;
+  color: white;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.member .text .bottom button:hover {
+  background: white;
+  border: 1px solid #ff8056;
+  color: #ff8056;
+}
+
+.member .text .bottom .name {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 22px;
+  color: #393939;
+}
+
+.member .text .bottom .written {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.member .text .bottom .written span {
+  font-size: 1.2rem;
+  line-height: 15px;
+  color: #999999;
+}
+
+.member .text .bottom .written .posts {
+  margin-right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .member .text .profile {
+    width: 70px !important;
+    height: 70px !important;
+    top: -15px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .member .text .profile {
+    width: 55px !important;
+    height: 55px !important;
+    top: -10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .member {
+    width: 42% !important;
+    margin-right: 16px;
+  }
+  .member .text .top .num {
+    display: none;
+  }
+  .member .text .top .txt {
+    display: none;
+  }
+  .member .text .bottom .photos {
+    display: none;
+  }
+  .member .text .bottom .name {
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 17px !important;
+  }
+  .member .text .bottom button {
+    width: 55%;
+  }
+  .member .text .bottom .written .posts {
+    margin: 0 !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

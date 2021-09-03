@@ -77,6 +77,8 @@
         }
 
         .post-info {
+          width: 100%;
+          height: 17px;
           display: flex;
           align-items: center;
 
@@ -88,7 +90,7 @@
           }
           .watch {
             width: 15px;
-            height: 15px;
+            height: 13px;
             margin-right: 5px;
             background-image: url(../../images/icons/watch.png);
           }
@@ -117,6 +119,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 10px;
 
       .latest-article {
         font-weight: 600;
@@ -138,7 +141,6 @@
           font-size: 1.8rem;
           line-height: 180%;
           color: #c7c7c7;
-
           display: flex;
           align-items: center;
         }
@@ -286,7 +288,12 @@
         }
 
         .next {
+          position: relative;
           background: #19222c;
+          img {
+            position: relative;
+            left: 1px;
+          }
         }
       }
       .view {

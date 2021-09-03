@@ -18,6 +18,10 @@ const VideoCard = ({
       onClick={onClick}
     >
       <span className="title">{title}</span>
+      <div className="s-info">
+        <img src="images/icons/play2.png" alt="play" />
+        <span className="play">PLAY NOW</span>
+      </div>
       <div className="info">
         <div className="wc">
           <img src="images/icons/watch2.png" alt="" className="watch-img" />

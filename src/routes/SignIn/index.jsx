@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const SignIn = () => {
   const [offset, setOffset] = useState(0);
-  const [dashArray, setDashArray] = useState("415 1650");
+  const [dashArray, setDashArray] = useState("410 1680");
 
   let style = {
     strokeDasharray: dashArray,
@@ -13,12 +13,12 @@ const SignIn = () => {
   };
 
   let btnStyle = {
-    border: "2.5px solid rgba(153, 153, 153, 0.3)",
+    border: "2.5px solid rgba(255, 255, 255, 0.3)",
   };
 
   const onEmailClick = () => {
     setOffset(0);
-    setDashArray("415 1650");
+    setDashArray("409 1650");
   };
 
   const onPWClick = () => {
@@ -84,17 +84,17 @@ const SignIn = () => {
 
         <span className="continue">Or continue with social media</span>
         <div className="other-login">
-          <button className="google">
+          <button className="google other">
             <img src="images/icons/google.png" alt="google" />
-            Google
+            <span>Google</span>
           </button>
-          <button className="facebook">
+          <button className="facebook other">
             <img src="images/icons/Facebook2.png" alt="google" />
-            facebook
+            <span>facebook</span>
           </button>
-          <button className="apple">
+          <button className="apple other">
             <img src="images/icons/apple.png" alt="google" />
-            Apple
+            <span>Apple </span>
           </button>
         </div>
         <div className="to-sign-up">

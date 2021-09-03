@@ -2,6 +2,10 @@
   @return $num * 4 /5;
 }
 
+@function dReduce($num) {
+  @return $num * 7 / 10;
+}
+
 .discover {
   width: 100vw;
   height: 100vh;
@@ -13,6 +17,10 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  nav:nth-child(2) {
+    display: none;
+  }
 
   .bg {
     width: 100vw;
@@ -210,14 +218,20 @@
             justify-content: center;
 
             .name {
-              width: 80%;
               font-weight: bold;
               font-size: 3.6rem;
-              line-height: 44px;
+              line-height: 4.4rem;
               color: #393939;
-              margin-bottom: 18px;
             }
 
+            .sub-name {
+              font-style: normal;
+              font-weight: bold;
+              font-size: 2rem;
+              color: #393939;
+
+              margin-bottom: 18px;
+            }
             .user {
               display: flex;
               align-items: center;
@@ -225,7 +239,7 @@
 
               span {
                 font-size: 1.4rem;
-                line-height: 17px;
+                line-height: 1.7rem;
                 color: rgba(57, 57, 57, 0.7);
               }
 
@@ -252,7 +266,7 @@
     }
   }
   .mobile-content {
-    width: 320px;
+    width: 600px;
     display: none;
     flex-direction: column;
     justify-self: center;
@@ -261,28 +275,37 @@
     .title {
       margin-bottom: 3px;
       font-weight: bold;
-      font-size: 16px;
-      line-height: 19px;
+      font-size: 3.2rem;
+      line-height: 3.8rem;
       color: #393939;
     }
 
     .description {
       margin-bottom: 20px;
       font-weight: 300;
-      font-size: 10px;
-      line-height: 12px;
+      font-size: 2rem;
+      line-height: 2.4rem;
       color: #999999;
     }
 
     .item {
+      position: relative;
       border-radius: 10px;
-      padding: 22px 25px;
+      padding: 44px 25px;
       background: white;
-      margin-bottom: 16px;
+      margin-bottom: 50px;
+
+      .bookmark {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 110px;
+        right: 44px;
+      }
 
       .item-bg {
         width: 100%;
-        margin-bottom: 12px;
+        margin-bottom: 24px;
       }
       .categories {
         align-self: center;
@@ -290,7 +313,7 @@
         display: flex;
         justify-content: space-between;
         font-weight: 500;
-        font-size: 1.6rem;
+        font-size: 2rem;
         line-height: 174%;
         margin-bottom: 15px;
 
@@ -313,31 +336,33 @@
       }
 
       .name {
-        margin-bottom: 7px;
         font-style: normal;
         font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 3.2rem;
+        line-height: 3.8rem;
         color: #393939;
       }
 
       .user {
-        margin-bottom: 10px;
+        margin: 18px 0;
         display: flex;
         align-items: center;
+
         .star {
           width: 11px;
           height: 11px;
+          margin-right: 3px;
         }
         span {
-          font-size: 12px;
-          line-height: 15px;
+          margin-right: 3px;
+          font-size: 2.4rem;
+          line-height: 3rem;
           color: rgba(57, 57, 57, 0.7);
         }
       }
       .about {
         margin-bottom: 5px;
-        font-size: 12px;
+        font-size: 2.4rem;
         line-height: 174%;
         color: rgba(57, 57, 57, 0.7);
       }
@@ -353,7 +378,7 @@
   .discover {
     .content {
       .right {
-        width: 960px !important;
+        width: 900px !important;
         height: 650px !important;
 
         .attraction {
@@ -363,9 +388,8 @@
           }
           .main {
             padding: 0 69px;
-            img {
-              width: 473.6px;
-              height: 290px;
+            .place {
+              width: 55% !important;
             }
             .about {
               overflow: hidden;
@@ -375,6 +399,7 @@
               -webkit-box-orient: vertical;
             }
             .instruction {
+              width: 40% !important;
               .name {
                 font-size: 3rem;
               }
@@ -439,11 +464,106 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .discover {
+    .content {
+      .left {
+        top: 20px;
+        margin-right: 100px !important;
+
+        .num-01 {
+          left: dReduce(250px);
+        }
+        .num-09 {
+          left: dReduce(220px);
+          top: dReduce(-174px);
+        }
+
+        .num-02 {
+          left: dReduce(220px);
+          top: dReduce(91px);
+        }
+
+        //
+        .num-08 {
+          left: dReduce(160px);
+          top: dReduce(-304px);
+        }
+
+        .num-03 {
+          left: dReduce(160px);
+          top: dReduce(221px);
+        }
+        //
+        .num-07 {
+          left: dReduce(-30px);
+          top: dReduce(-394px);
+        }
+
+        .num-04 {
+          left: dReduce(-30px);
+          top: dReduce(311px);
+        }
+        .num-06 {
+          left: dReduce(-130px);
+          top: dReduce(-304px);
+        }
+        .num-05 {
+          left: dReduce(-130px);
+          top: dReduce(221px);
+        }
+      }
+      .right {
+        width: 700px !important;
+
+        .attraction {
+          height: 400px;
+          .categories {
+            margin-bottom: 30px !important;
+          }
+          .main {
+            padding: 0 69px;
+            .place {
+              width: 50% !important;
+              height: 80% !important;
+            }
+            .instruction {
+              width: 40%;
+              .name {
+                width: 100% !important;
+                font-size: 2.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
   .discover {
     height: unset;
     background-color: #f2f2f2;
     overflow: unset;
+
+    .Navigation {
+      margin-bottom: 100px !important;
+      .navList {
+        a {
+          color: black !important;
+        }
+      }
+    }
+
+    nav:nth-child(1) {
+      display: none;
+    }
+
+    nav:nth-child(2) {
+      display: flex;
+    }
+
     .Navigation {
       margin-bottom: 30px;
     }
@@ -462,6 +582,58 @@
     }
     .footer {
       display: flex;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .discover {
+    .Navigation {
+      margin-bottom: 50px !important;
+    }
+    .mobile-content {
+      width: 320px !important;
+
+      .title {
+        font-size: 16px !important;
+      }
+      .description {
+        font-size: 12px !important;
+      }
+      .item {
+        padding: 24px 25px !important;
+        .categories {
+          font-size: 10px !important;
+        }
+        .item-bg {
+          margin-bottom: 12px !important;
+        }
+        .bookmark {
+          width: 25px !important;
+          height: 25px !important;
+          top: 77px !important;
+          right: 34px !important;
+        }
+        .name {
+          font-size: 16px !important;
+        }
+
+        .user {
+          margin: 7px 0 !important;
+          span {
+            font-size: 12px !important;
+          }
+        }
+
+        .about {
+          font-size: 12px !important;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3; /* number of lines to show */
+          -webkit-box-orient: vertical;
+        }
+      }
     }
   }
 }

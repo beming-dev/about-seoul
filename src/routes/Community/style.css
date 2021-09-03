@@ -1,0 +1,697 @@
+.community {
+  width: 100vw;
+  min-height: calc(100vw * 2700 / 1920);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background: #f2f2f2;
+  color: white;
+}
+
+.community .content {
+  width: 1200px;
+  margin-bottom: 80px;
+}
+
+.community .background-img {
+  width: 100%;
+  height: 100vh;
+  background-repeat: none;
+  background-image: url(../../images/background/community_back.png);
+  background-position: center;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.community .content-01 {
+  position: absolute;
+  bottom: 15%;
+  left: 11%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  margin: 0 !important;
+}
+
+.community .content-01 .txt-mobile {
+  display: none;
+  font-size: 1.8rem;
+  line-height: 170%;
+}
+
+.community .content-01 .txt-01 {
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 160%;
+  color: #ffb800;
+}
+
+.community .content-01 .txt-02 {
+  width: 509px;
+  font-weight: bold;
+  font-size: 6.4rem;
+  line-height: 130%;
+  margin-bottom: 12px;
+}
+
+.community .content-01 .txt-03 {
+  width: 486px;
+  font-size: 1.8rem;
+  line-height: 170%;
+}
+
+.community .content-01 .details {
+  margin-top: 149px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 545px;
+  height: 122px;
+}
+
+.community .content-02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 684px;
+  margin-top: calc(100vh + 100px);
+}
+
+.community .content-02 .title {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 160%;
+  color: #393939;
+}
+
+.community .content-02 .description {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 160%;
+  text-align: center;
+  color: #999999;
+  margin-bottom: 45px;
+}
+
+.community .content-02 .tips {
+  width: 100%;
+  height: 82%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.community .content-02 .tips .right .left .top .bottom {
+  width: 576px;
+}
+
+.community .content-02 .tips .left {
+  width: 49%;
+  height: 100%;
+}
+
+.community .content-02 .tips .right {
+  width: 49%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.community .content-02 .tips .right .top {
+  width: 100%;
+  height: 48%;
+}
+
+.community .content-02 .tips .right .bottom {
+  width: 100%;
+  height: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.community .content-03 {
+  height: 525px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.community .content-03 .title {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 160%;
+  text-align: center;
+  color: #393939;
+}
+
+.community .content-03 .description {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 160%;
+  text-align: center;
+  color: #999999;
+  margin-bottom: 45px;
+}
+
+.community .content-03 .members {
+  width: 100%;
+  height: 76.6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.community .ad {
+  width: 1200px;
+  height: 176px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px 0;
+}
+
+.community .ad .txt-01 {
+  font-weight: bold;
+  font-size: 3.5rem;
+  line-height: 32px;
+  z-index: 10;
+  margin-bottom: 10px;
+  margin-left: 76px;
+}
+
+.community .ad .txt-02 {
+  font-size: 2rem;
+  line-height: 180%;
+  z-index: 10;
+  margin-left: 76px;
+}
+
+.community .ad .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.community .ad .phone-01,
+.community .ad .phone-02 {
+  width: 11.14%;
+  position: absolute;
+  z-index: 2;
+}
+
+.community .ad .phone-01 {
+  left: 67.6%;
+  bottom: 0;
+}
+
+.community .ad .phone-02 {
+  left: 79%;
+  bottom: 0;
+}
+
+.community .content-04 {
+  height: 730px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #393939;
+}
+
+.community .content-04 .title {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 160%;
+  text-align: center;
+}
+
+.community .content-04 .description {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 160%;
+  text-align: center;
+  color: #999999;
+  margin-bottom: 45px;
+}
+
+.community .content-04 .posts {
+  width: 100%;
+  height: 83.15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.community .content-04 .posts .left {
+  width: 60.5%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  border-radius: 15px;
+}
+
+.community .content-04 .posts .left .bottom {
+  width: 85.4%;
+  padding: 0 7.3%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.community .content-04 .posts .left .bottom .txt-01 {
+  width: 85%;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 140%;
+  color: #000000;
+}
+
+.community .content-04 .posts .left .bottom .txt-02 {
+  font-size: 1.6rem;
+  line-height: 19px;
+  color: #999999;
+}
+
+.community .content-04 .posts .left .bottom .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 22px;
+  color: #999999;
+}
+
+.community .content-04 .posts .left .bottom .about .name {
+  margin-left: 13px;
+}
+
+.community .content-04 .posts .left .bottom .about .dot {
+  margin: 0 10px;
+}
+
+.community .content-04 .posts .right {
+  width: 29%;
+  height: 100%;
+  padding: 0 39px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: white;
+}
+
+.community .content-04 .posts .right .buttons {
+  height: 7.4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.community .content-04 .posts .right .buttons button {
+  width: 47.4%;
+  height: 100%;
+  border-radius: 40px;
+}
+
+.community .content-04 .posts .right .buttons .btn-popular {
+  background: -webkit-gradient(linear, left top, right top, color-stop(-23.15%, #ffd951), color-stop(98.08%, #ff8056), color-stop(151.85%, #ff5858));
+  background: linear-gradient(90deg, #ffd951 -23.15%, #ff8056 98.08%, #ff5858 151.85%);
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #ffffff;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.community .content-04 .posts .right .buttons .btn-recent {
+  border: 1.3px solid #999999;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #999999;
+  background: white;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.community .content-04 .posts .right .buttons .btn-popular:hover {
+  background: white;
+  border: 1px solid #ff8056;
+  color: #ff8056;
+}
+
+.community .content-04 .posts .right .buttons .btn-recent:hover {
+  background: #999999;
+  color: white;
+}
+
+.community .content-04 .posts .right .post {
+  height: 490px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.community .content-04 .posts .post {
+  width: 100%;
+  height: 80.9%;
+}
+
+@media (max-width: 1600px) {
+  .community .content-01 {
+    width: 1200px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .community .content,
+  .community .ad {
+    width: 960px !important;
+  }
+  .community .ad {
+    height: 140px !important;
+  }
+  .community .content-01 {
+    bottom: 18%;
+    left: 9%;
+  }
+  .community .content-01 .details {
+    margin-top: 150px !important;
+    width: 436px !important;
+    height: 97.5px !important;
+  }
+  .community .content-02 {
+    height: 547.2px !important;
+  }
+  .community .content-03 {
+    height: 420px !important;
+  }
+  .community .content-04 {
+    height: 584px !important;
+  }
+  .community .content-04 .description {
+    margin-bottom: 30px !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .community .content,
+  .community .ad {
+    width: 730px !important;
+  }
+  .community .ad {
+    height: 120px !important;
+  }
+  .community .content-01 {
+    bottom: 25% !important;
+    left: 5% !important;
+  }
+  .community .content-01 .details {
+    margin-top: 100px !important;
+    width: 436px !important;
+    height: 97.5px !important;
+  }
+  .community .content-02 {
+    height: 410.3px !important;
+  }
+  .community .content-02 .description {
+    margin-bottom: 25px !important;
+  }
+  .community .content-03 {
+    height: 315px !important;
+  }
+  .community .content-04 {
+    height: 438px !important;
+  }
+  .community .content-04 .description {
+    margin-bottom: 20px !important;
+  }
+  .community .content-04 .posts .right {
+    padding: 0 15px !important;
+  }
+  .community .content-04 .posts .left .bottom .txt-01 {
+    font-size: 2.7rem !important;
+    width: 100% !important;
+  }
+  .community .content-04 .posts .left .bottom .about img[alt="profile"] {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .community .background-img {
+    background-size: cover;
+    background-position: 35%;
+    height: 50vh;
+  }
+  .community .content,
+  .community .ad {
+    width: 320px !important;
+  }
+  .community .ad {
+    height: 56px !important;
+  }
+  .community .ad .txt-01 {
+    margin: 6% !important;
+    font-size: 2rem !important;
+  }
+  .community .ad .txt-02 {
+    display: none;
+  }
+  .community .ad .phone-01 {
+    left: 72% !important;
+  }
+  .community .ad .phone-02 {
+    left: 84% !important;
+  }
+  .community .content-01 {
+    width: 320px !important;
+    height: unset !important;
+    bottom: 5% !important;
+  }
+  .community .content-01 span {
+    width: 100% !important;
+  }
+  .community .content-01 .txt-mobile {
+    display: block;
+  }
+  .community .content-01 .txt-01 {
+    font-size: 2.4rem;
+  }
+  .community .content-01 .txt-02 {
+    font-size: 4.5rem;
+  }
+  .community .content-01 .txt-03 {
+    display: none !important;
+  }
+  .community .content-01 .details {
+    width: 90% !important;
+    margin-top: 70px !important;
+  }
+  .community .content-02 {
+    height: 780px !important;
+    margin-top: calc(50vh + 70px);
+  }
+  .community .content-02 .tips {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .community .content-02 .tips .left {
+    width: 100% !important;
+    margin-bottom: 16px !important;
+  }
+  .community .content-02 .tips .right {
+    width: 100% !important;
+  }
+  .community .content-03 {
+    height: 320px !important;
+  }
+  .community .content-03 .members {
+    overflow-x: scroll;
+  }
+  .community .content-03 .members {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  .community .content-03 .members::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera*/
+  }
+  .community .content-04 {
+    height: unset !important;
+  }
+  .community .content-04 .title {
+    margin: 0 !important;
+  }
+  .community .content-04 .description {
+    margin-bottom: 30px !important;
+  }
+  .community .content-04 .posts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .community .content-04 .posts .left {
+    width: 100% !important;
+    height: 276px !important;
+    margin-bottom: 16px;
+  }
+  .community .content-04 .posts .left .bottom .txt-01 {
+    font-size: 2rem !important;
+  }
+  .community .content-04 .posts .left .bottom .txt-02 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  .community .content-04 .posts .left .bottom .about span {
+    font-size: 1.5rem;
+  }
+  .community .content-04 .posts .right {
+    width: 100% !important;
+    height: 456px !important;
+    padding: 0 !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .community .content-04 .posts .right .buttons {
+    width: 80% !important;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+    margin-top: 20px !important;
+  }
+  .community .content-04 .posts .right .buttons button {
+    width: 45% !important;
+  }
+  .community .content-04 .posts .right .post {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

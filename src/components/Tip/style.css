@@ -1,0 +1,155 @@
+.tip {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tip .tip-img {
+  position: absolute;
+  top: 0;
+}
+
+.tip .cover {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#19222c), color-stop(0.01%, #000000), color-stop(48.96%, rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, #19222c 0%, #000000 0.01%, rgba(0, 0, 0, 0) 48.96%);
+  border-radius: 10px;
+  -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
+          transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.tip .txt-01 {
+  z-index: 2;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 36px;
+}
+
+.tip .txt-02,
+.tip .txt-03,
+.tip .txt-04 {
+  z-index: 2;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 128%;
+  width: 80%;
+  margin-bottom: 12px;
+  position: absolute;
+  bottom: 23%;
+}
+
+.tip .txt-01 {
+  width: 80%;
+  margin-bottom: 12px;
+  position: absolute;
+  bottom: 12%;
+}
+
+.tip .txt {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.tip .txt-03,
+.tip .txt-04 {
+  width: 60%;
+  padding-right: 17%;
+}
+
+.tip .profile {
+  width: 80%;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 10%;
+}
+
+.tip .profile .dot {
+  margin: 0 5px;
+}
+
+.tip .profile .person {
+  margin-right: 5px;
+}
+
+.tip .profile-01 {
+  bottom: 4.5%;
+}
+
+.tip .txt-01,
+.tip .profile-01,
+.tip .txt-02,
+.tip .profile-02 {
+  width: 90%;
+}
+
+.tip-01 {
+  width: 100%;
+  height: 100%;
+}
+
+.tip-01 .tip-img {
+  width: 100%;
+  height: 100%;
+}
+
+.tip-02 {
+  width: 100%;
+  height: 100%;
+}
+
+.tip-02 .tip-img {
+  width: 100%;
+  height: 100%;
+}
+
+.tip-03,
+.tip-04 {
+  width: 48%;
+  height: 100%;
+}
+
+.tip-03 .tip-img,
+.tip-04 .tip-img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .tip .txt-01 {
+    font-size: 2.5rem;
+  }
+  .tip .txt-03,
+  .tip .txt-04 {
+    width: 80% !important;
+    padding: 0 !important;
+  }
+  .tip .profile .person {
+    width: 22px;
+    height: 22px;
+  }
+  .tip .profile .txt {
+    font-size: 1.4rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

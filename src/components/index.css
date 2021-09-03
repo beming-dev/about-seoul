@@ -37,10 +37,6 @@ input {
   border: none;
 }
 
-input:focus {
-  outline: none;
-}
-
 @media (max-width: 1200px) {
   html {
     font-size: 8px !important;
@@ -52,3 +48,4 @@ input:focus {
     font-size: 7px !important;
   }
 }
+/*# sourceMappingURL=index.css.map */

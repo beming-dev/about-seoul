@@ -34,14 +34,7 @@ const History = () => {
   };
 
   const onTop = () => {
-    let timeOut;
-    if (
-      document.body.scrollTop !== 0 ||
-      document.documentElement.scrollTop !== 0
-    ) {
-      window.scrollBy(0, -50);
-      timeOut = setTimeout("onTop()", 10);
-    } else clearTimeout(timeOut);
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {

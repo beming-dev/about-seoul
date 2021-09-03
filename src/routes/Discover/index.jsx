@@ -41,6 +41,7 @@ const Discover = () => {
   return (
     <div className="discover">
       <Navigation />
+      <Navigation black={true} />
       <img
         src={`images/background/${attractionInfo[curNum].bg}`}
         alt="bg"
@@ -81,6 +82,9 @@ const Discover = () => {
               <div className="main">
                 <div className="instruction">
                   <span className="name">{attractionInfo[curNum].name}</span>
+                  <span className="sub-name">
+                    {attractionInfo[curNum].subName}
+                  </span>
                   <div className="user">
                     <img
                       src="images/icons/star.png"
@@ -138,6 +142,11 @@ const Discover = () => {
                   className="item-bg"
                 />
                 <span className="name">{attractionInfo[i].name}</span>
+                <img
+                  src="images/icons/bookmark3.png"
+                  alt="bookmark"
+                  className="bookmark"
+                />
                 <div className="user">
                   <img
                     src="images/icons/star.png"
@@ -148,13 +157,8 @@ const Discover = () => {
                   <span className="reviews">
                     ({attractionInfo[i].review} reviews)
                   </span>
-                  <img
-                    src="images/icons/bookmark2.png"
-                    alt="bookmark"
-                    className="bookmark"
-                  />
                 </div>
-                <span className="about">{attractionInfo[i].text_mobile}</span>
+                <span className="about">{attractionInfo[i].about}</span>
               </div>
             );
           }

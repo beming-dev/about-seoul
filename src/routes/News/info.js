@@ -79,5 +79,5 @@ export const articleCategory = [
   "City",
   "Urban Planning",
   "Economy",
-  "Treffic",
+  "Traffic",
 ];

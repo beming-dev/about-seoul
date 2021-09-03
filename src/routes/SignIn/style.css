@@ -1,0 +1,208 @@
+.sign-in {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./signin.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.sign-in .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 576px;
+  height: 705px;
+  background: white;
+  border-radius: 15px;
+  color: #999999;
+}
+
+.sign-in .content .title {
+  color: #393939;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 5px;
+}
+
+.sign-in .content .description {
+  font-size: 20px;
+  line-height: 140.02%;
+  margin-bottom: 44px;
+}
+
+.sign-in .content #submit {
+  width: 407px;
+  height: 58px;
+  border-radius: 46px;
+  background: white;
+  margin-top: 49px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  mix-blend-mode: normal;
+  color: rgba(153, 153, 153, 0.5);
+}
+
+.sign-in .content .continue {
+  font-size: 18px;
+  line-height: 22px;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.sign-in .content .other-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.sign-in .content .other-login button {
+  width: 130px;
+  height: 40px;
+  border-radius: 35px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(153, 153, 153, 0.8);
+}
+
+.sign-in .content .other-login button img {
+  margin-right: 7px;
+}
+
+.sign-in .content .other-login .to-sign-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign-in .content .other-login .to-sign-up .txt {
+  color: orange;
+}
+
+.sign-in .right {
+  width: 500px;
+  color: #f1f1f2;
+}
+
+@media (max-width: 767px) {
+  .sign-in .right {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    max-height: 350px;
+  }
+}
+
+.sign-in svg {
+  position: absolute;
+  width: 510px;
+}
+
+.sign-in svg path {
+  position: relative;
+  fill: none;
+  stroke: url(#linearGradient);
+  stroke-width: 4;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.sign-in .form {
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign-in .form label {
+  width: 410px;
+  height: 16px;
+  padding-left: 5px;
+  color: rgba(57, 57, 57, 0.8);
+  display: block;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.sign-in .form input {
+  width: 410px;
+  height: 30px;
+  padding-left: 5px;
+  padding: 10px 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #393939;
+  background: transparent;
+  border: 0;
+  outline: none !important;
+}
+
+.sign-in .form .password {
+  border-bottom: 3px solid rgba(153, 153, 153, 0.3);
+}
+
+.sign-in .form .email {
+  margin-bottom: 30px;
+  border-bottom: 3px solid rgba(153, 153, 153, 0.3);
+}
+
+.sign-in input::-moz-focus-inner {
+  border: 0;
+}
+
+.sign-in #submit {
+  color: #707075;
+  margin-top: 40px;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+/*# sourceMappingURL=style.css.map */

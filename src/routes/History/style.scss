@@ -109,6 +109,7 @@
         top: 0;
         left: 0;
         z-index: 1;
+        border-radius: 20px;
       }
 
       .cover {
@@ -308,6 +309,7 @@
 
       .left {
         width: 45%;
+        height: 245px;
       }
       .right {
         height: 245px;
@@ -325,6 +327,9 @@
 
     .content-04 {
       .container {
+        .left-container {
+          height: 245px !important;
+        }
         .left-container,
         .slider,
         .right {

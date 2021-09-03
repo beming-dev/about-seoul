@@ -22,7 +22,8 @@ export const attractionInfo = [
       "The design of the 123-story tower draws from the forms of traditional Korean ceramics and calligraphy, rises in a sleek, tapered profile...",
   },
   {
-    name: "DDP (Dongdaemun Design Plaza)",
+    name: "DDP",
+    subName: "(Dongdaemun Design Plaza)",
     rate: "4.7",
     review: "2375",
     about:
@@ -51,7 +52,8 @@ export const attractionInfo = [
     bg: "discover_02.png",
   },
   {
-    name: "DDP (Dongdaemun Design Plaza)",
+    name: "DDP",
+    subName: "(Dongdaemun Design Plaza)",
     rate: "4.7",
     review: "2375",
     about:
@@ -78,7 +80,8 @@ export const attractionInfo = [
     bg: "discover_02.png",
   },
   {
-    name: "DDP (Dongdaemun Design Plaza)",
+    name: "DDP",
+    subName: "(Dongdaemun Design Plaza)",
     rate: "4.7",
     review: "2375",
     about:

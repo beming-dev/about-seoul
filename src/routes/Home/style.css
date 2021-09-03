@@ -1,0 +1,135 @@
+.home {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../images/background/home_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.home .bg-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.home .content {
+  z-index: 2;
+  width: 77%;
+  min-height: 750px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.home .content .wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .content .title {
+  font-weight: bold;
+  font-size: 7.2rem;
+  line-height: 160%;
+  color: #ffb800;
+  margin-bottom: 8px;
+}
+
+.home .content .description {
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 160%;
+  margin-bottom: 28px;
+}
+
+.home .content .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 78px;
+}
+
+.home .content .icons button {
+  width: 163px;
+  height: 43px;
+  border: 2px solid white;
+  background: transparent;
+  border-radius: 36px;
+  color: white;
+  font-size: 1.8rem;
+  line-height: 139%;
+  margin-right: 15px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.home .content .icons button:hover {
+  background-color: white;
+  color: black;
+}
+
+.home .content .icons .bookmark-out {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  background-color: #ffb800;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .home .icons button {
+    width: 122px !important;
+    height: 33px !important;
+  }
+  .home .icons .bookmark-out {
+    width: 33px !important;
+    height: 33px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .home .content .title {
+    line-height: 100%;
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
