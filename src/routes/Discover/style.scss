@@ -18,6 +18,36 @@
   position: relative;
   overflow: hidden;
 
+  .Navigation {
+    margin-bottom: 20px;
+    .navList {
+      .nav-discover {
+        font-weight: 700;
+        text-decoration: overline;
+      }
+    }
+
+    .mobile-nav {
+      .nav-discover {
+        color: #ffb800;
+      }
+      .ico2-nav-community {
+        display: none;
+      }
+      .ico-nav-discover {
+        display: none;
+      }
+      .ico2-nav-news {
+        display: none;
+      }
+      .ico2-nav-history {
+        display: none;
+      }
+      .ico2-nav-home {
+        display: none;
+      }
+    }
+  }
   nav:nth-child(2) {
     display: none;
   }
@@ -55,6 +85,14 @@
         position: absolute;
         top: 274px;
         left: 0;
+
+        .circle {
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          top: 0;
+          left: 195px;
+        }
       }
       .num {
         position: absolute;
@@ -130,7 +168,7 @@
     }
 
     .right {
-      width: 1200px;
+      width: 1080px;
       height: 729px;
       position: relative;
 
@@ -165,7 +203,7 @@
 
       .attraction {
         width: 100%;
-        height: 618px;
+        height: 558px;
         background: white;
         border-radius: 20px;
         display: flex;
@@ -201,11 +239,52 @@
         }
 
         .main {
+          position: relative;
           width: 85.2%;
           height: 62.3%;
           display: flex;
           justify-content: space-between;
           align-items: center;
+
+          .hotspot {
+            width: 51px;
+            height: 53px;
+
+            .ico {
+              width: 100%;
+              height: 100%;
+            }
+            .popup {
+              display: none;
+            }
+          }
+
+          .hotspot:hover {
+            .popup {
+              display: block;
+            }
+          }
+          .hotspot-01 {
+            position: absolute;
+            top: 35%;
+            right: 34%;
+
+            .popup {
+              position: absolute;
+              top: -60%;
+              left: -63%;
+            }
+          }
+          .hotspot-02 {
+            position: absolute;
+            top: 65%;
+            right: 14%;
+            .popup {
+              position: absolute;
+              top: -40%;
+              left: -30%;
+            }
+          }
 
           .place {
             width: 59.3%;
@@ -417,8 +496,15 @@
         }
         .num-container {
           top: 205.6px !important;
+
+          .circle {
+            width: 8px;
+            height: 8px;
+            left: 146px !important;
+          }
         }
         .num-01 {
+          top: reduce(-39px);
           left: reduce(250px);
         }
         .num-09 {
@@ -471,7 +557,16 @@
         top: 20px;
         margin-right: 100px !important;
 
+        .num-container {
+          top: 205.6px !important;
+
+          .circle {
+            left: 146px !important;
+          }
+        }
+
         .num-01 {
+          top: dReduce(-39px);
           left: dReduce(250px);
         }
         .num-09 {
@@ -523,6 +618,26 @@
           }
           .main {
             padding: 0 69px;
+            .hotspot {
+              width: 32px !important;
+              height: 33px !important;
+            }
+            .hotspot-01 {
+              top: 38%;
+              right: 32%;
+              .popup {
+                top: -100%;
+                left: -127%;
+              }
+            }
+            .hotspot-02 {
+              top: 60%;
+              right: 18%;
+              .popup {
+                top: -65%;
+                left: -80%;
+              }
+            }
             .place {
               width: 50% !important;
               height: 80% !important;

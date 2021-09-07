@@ -30,28 +30,38 @@ const Navigation = ({ black }) => {
   const list = [
     {
       cat: "Home",
-      ico: "home.png",
+      ico: "home.svg",
+      ico2: "homey.svg",
       link: "",
+      class: "nav-home",
     },
     {
       cat: "History",
-      ico: "history.png",
+      ico: "history.svg",
+      ico2: "historyy.svg",
       link: "history",
+      class: "nav-history",
     },
     {
       cat: "News",
-      ico: "news.png",
+      ico: "news.svg",
+      ico2: "newsy.svg",
       link: "news",
+      class: "nav-news",
     },
     {
       cat: "Discover",
-      ico: "discover.png",
+      ico: "discover.svg",
+      ico2: "discovery.svg",
       link: "discover",
+      class: "nav-discover",
     },
     {
       cat: "Community",
-      ico: "community.png",
+      ico: "community.svg",
+      ico2: "communityy.svg",
       link: "community",
+      class: "nav-community",
     },
   ];
 
@@ -79,9 +89,18 @@ const Navigation = ({ black }) => {
         </div>
         {list.map((item, i) => (
           <div className="item" key={i}>
-            <img src={`images/src/${item.ico}`} alt="" className="icon" />
+            <img
+              src={`images/src/${item.ico}`}
+              alt="ico"
+              className={`icon ico-${item.class}`}
+            />
+            <img
+              src={`images/src/${item.ico2}`}
+              alt="ico"
+              className={`icon ico2-${item.class}`}
+            />
             <Link to={`/${item.link}`}>
-              <span>{item.cat}</span>
+              <span className={item.class}>{item.cat}</span>
             </Link>
           </div>
         ))}
@@ -95,18 +114,14 @@ const Navigation = ({ black }) => {
         />
       </a>
       <ul className="navList">
-        <Link to="/history">
-          <li>History</li>
-        </Link>
-        <Link to="/news">
-          <li>News</li>
-        </Link>
-        <Link to="/discover">
-          <li>Discover</li>
-        </Link>
-        <Link to="/community">
-          <li>Community</li>
-        </Link>
+        {list.map((item, i) => {
+          if (i !== 0)
+            return (
+              <Link to={item.link}>
+                <li className={item.class}>{item.cat}</li>
+              </Link>
+            );
+        })}
       </ul>
       <div className="icons">
         <img

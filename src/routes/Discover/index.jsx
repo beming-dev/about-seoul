@@ -52,6 +52,11 @@ const Discover = () => {
         <div className="left">
           <img src="images/src/wheel.png" alt="line" className="line" />
           <div className="num-container">
+            <img
+              src="images/icons/circle_yellow.png"
+              alt="circle"
+              className="circle"
+            />
             {numList.map((num, i) => (
               <li key={i} className={`num num-0${((curNum + i) % N) + 1}`}>
                 {num}
@@ -108,6 +113,38 @@ const Discover = () => {
                   alt="attraction"
                   className="place"
                 />
+                {curNum % 3 === 0 ? (
+                  <div className="hotspot-01 hotspot">
+                    <img
+                      src="images/icons/btn-01.png"
+                      alt="hotspot"
+                      className="ico"
+                    />
+                    <img
+                      src="images/icons/popup-01.png"
+                      alt="popup"
+                      className="popup"
+                    />
+                  </div>
+                ) : (
+                  <></>
+                )}
+                {curNum % 3 === 0 ? (
+                  <div className="hotspot-02 hotspot">
+                    <img
+                      src="images/icons/btn-02.png"
+                      alt="hotspot"
+                      className="ico"
+                    />
+                    <img
+                      src="images/icons/popup-02.png"
+                      alt="popup"
+                      className="popup"
+                    />
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
             </div>
           </div>

@@ -47,7 +47,7 @@
 }
 
 @media (max-width: 1024px) {
-  .Footer {
+  .footer {
     .about {
       display: flex;
       flex-direction: column;
@@ -60,6 +60,38 @@
       width: 90px !important;
       img {
         height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .about {
+      .logo {
+        width: 44px;
+        height: 19px;
+        margin-bottom: 5px !important;
+      }
+    }
+    .copyright {
+      display: none !important;
+    }
+    .icons {
+      width: 50px !important;
+      margin-right: 26.5px !important;
+
+      .facebook {
+        width: 5px;
+        height: 10.5px;
+      }
+      .twitter {
+        width: 12.2px;
+        height: 10.1px;
+      }
+      .instagram {
+        width: 12.2px;
+        height: 12.3px;
       }
     }
   }

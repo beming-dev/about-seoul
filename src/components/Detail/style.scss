@@ -37,14 +37,20 @@
 
 @media (max-width: 768px) {
   .detail {
-    width: 100px !important;
-    height: 85px !important;
+    width: 75px !important;
+    height: 59px !important;
+
+    .name {
+      font-size: 10px;
+      line-height: 130%;
+    }
     img {
-      width: 24px !important;
-      height: 24px !important;
+      width: 15px !important;
+      height: 14.2px !important;
     }
     .num {
-      font-size: 2.7rem;
+      font-size: 15px;
+      line-height: 130%;
     }
   }
 }

@@ -10,6 +10,29 @@
   align-items: center;
   position: relative;
 
+  .Navigation {
+    .mobile-nav {
+      .nav-home {
+        color: #ffb800;
+      }
+      .ico2-nav-community {
+        display: none;
+      }
+      .ico2-nav-discover {
+        display: none;
+      }
+      .ico2-nav-news {
+        display: none;
+      }
+      .ico2-nav-history {
+        display: none;
+      }
+      .ico-nav-home {
+        display: none;
+      }
+    }
+  }
+
   .bg-cover {
     position: absolute;
     top: 0;
@@ -43,6 +66,8 @@
     }
 
     .description {
+      width: 80%;
+      max-width: 621px;
       font-weight: 300;
       font-size: 2rem;
       line-height: 160%;
@@ -80,6 +105,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        img {
+          width: 14.5px;
+          height: 21px;
+        }
       }
     }
   }
@@ -96,6 +125,11 @@
       .bookmark-out {
         width: 33px !important;
         height: 33px !important;
+
+        img {
+          width: 10px !important;
+          height: 14.5px !important;
+        }
       }
     }
   }
@@ -107,6 +141,14 @@
       .title {
         line-height: 100%;
         margin-bottom: 20px;
+        font-size: 40px;
+        line-height: 125%;
+      }
+      .description {
+        width: 100%;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 160%;
       }
     }
   }

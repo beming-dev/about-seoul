@@ -64,6 +64,7 @@ const SignIn = () => {
               type="email"
               id="email"
               onFocus={onEmailClick}
+              autoComplete="off"
             />
             <label for="password">Password</label>
             <input
@@ -75,8 +76,8 @@ const SignIn = () => {
             <input
               type="submit"
               id="submit"
-              value="Submit"
-              onFocus={onSubmitClick}
+              value="Sign in"
+              onClick={onSubmitClick}
               style={offset !== -1154 ? btnStyle : style}
             />
           </div>

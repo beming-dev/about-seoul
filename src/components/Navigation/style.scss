@@ -9,7 +9,7 @@
 
   .mobile-nav {
     transition-duration: 0.5s;
-    position: absolute;
+    position: fixed;
     top: 0;
     display: none;
     flex-direction: column;

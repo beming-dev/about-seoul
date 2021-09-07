@@ -12,6 +12,25 @@
 
   .Navigation {
     margin-bottom: 70px;
+    z-index: 101;
+
+    .mobile-nav {
+      .ico2-nav-community {
+        display: none;
+      }
+      .ico2-nav-discover {
+        display: none;
+      }
+      .ico2-nav-news {
+        display: none;
+      }
+      .ico2-nav-history {
+        display: none;
+      }
+      .ico2-nav-home {
+        display: none;
+      }
+    }
   }
   .content {
     display: flex;
@@ -54,6 +73,17 @@
       mix-blend-mode: normal;
       background: transparent;
       color: rgba(255, 255, 255, 0.5);
+      transition-duration: 0.5s;
+    }
+
+    #submit:hover {
+      border: none;
+      background: linear-gradient(
+        90deg,
+        #ffd951 -23.15%,
+        #ff8056 98.08%,
+        #ff5858 151.85%
+      );
     }
 
     .continue {
@@ -97,6 +127,7 @@
 
       .txt {
         color: orange;
+        text-decoration: underline;
       }
     }
   }

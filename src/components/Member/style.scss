@@ -7,6 +7,10 @@
   background: white;
   border-radius: 15px;
 
+  .back_img {
+    height: 206px;
+  }
+
   .text {
     width: 100%;
     height: 196px;
@@ -105,7 +109,11 @@
 
 @media (max-width: 1200px) {
   .member {
+    .back_img {
+      height: 164px !important;
+    }
     .text {
+      height: 157px !important;
       .profile {
         width: 70px !important;
         height: 70px !important;
@@ -117,7 +125,11 @@
 
 @media (max-width: 960px) {
   .member {
+    .back_img {
+      height: 124px !important;
+    }
     .text {
+      height: 117px !important;
       .profile {
         width: 55px !important;
         height: 55px !important;
@@ -131,6 +143,10 @@
   .member {
     width: 42% !important;
     margin-right: 16px;
+
+    .back_img {
+      height: 100.3px !important;
+    }
 
     .text {
       .top {

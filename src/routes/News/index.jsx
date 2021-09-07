@@ -60,6 +60,12 @@ const News = () => {
           </div>
         </div>
         <img src="images/src/news_01.png" alt="news" className="right" />
+        <div className="circle">
+          <img src="images/icons/oval-01.png" alt="oval" />
+          <img src="images/icons/oval-02.png" alt="oval" />
+          <img src="images/icons/oval-02.png" alt="oval" />
+          <img src="images/icons/oval-02.png" alt="oval" />
+        </div>
       </div>
       <div className="content-02 content">
         <div className="head">

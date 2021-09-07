@@ -24,7 +24,7 @@ const History = () => {
       if (pos < 0) pos = 0;
       else if (pos >= imgRight.current.width - 5)
         pos = imgRight.current.width - 5;
-      slide.current.style.left = `${pos}px`;
+      slide.current.style.left = `${pos - 3}px`;
       imgLeft.current.style.width = `${pos}px`;
     }
   };
@@ -71,6 +71,23 @@ const History = () => {
       </div>
       <div className="content content-02">
         <span className="background-text">21C</span>
+        <select name="century" id="century">
+          <option className="opt" value="21c">
+            21c
+          </option>
+          <option className="opt" value="20c">
+            20c
+          </option>
+          <option className="opt" value="15c">
+            15c
+          </option>
+          <option className="opt" value="10c">
+            10c
+          </option>
+          <option className="opt" value="1c">
+            1c
+          </option>
+        </select>
         <div className="left intro">
           <span className="date">November 2010</span>
           <span className="title">The 2010 G20 Seoul Summit was held</span>

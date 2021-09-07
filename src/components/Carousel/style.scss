@@ -139,8 +139,17 @@
     }
 
     .prev {
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(4px);
       margin-left: 22px;
       margin-right: 24px;
+    }
+
+    .next {
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(4px);
     }
   }
 
@@ -192,6 +201,11 @@
 @media (max-width: 768px) {
   .carousel {
     width: 100%;
+
+    .name {
+      margin-bottom: 15px !important;
+    }
+
     .controller {
       display: none;
     }

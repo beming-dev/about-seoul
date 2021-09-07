@@ -20,7 +20,35 @@
     z-index: 4;
     color: black !important;
     background: white;
+    .navList {
+      .nav-news {
+        font-weight: 700;
+        text-decoration: overline;
+      }
+    }
+
+    .mobile-nav {
+      .nav-news {
+        color: #ffb800;
+      }
+      .ico2-nav-community {
+        display: none;
+      }
+      .ico2-nav-discover {
+        display: none;
+      }
+      .ico-nav-news {
+        display: none;
+      }
+      .ico2-nav-history {
+        display: none;
+      }
+      .ico2-nav-home {
+        display: none;
+      }
+    }
   }
+
   a {
     color: #3e3e3e;
   }
@@ -31,6 +59,7 @@
   }
 
   .content-01 {
+    position: relative;
     height: 555px;
     display: flex;
     border-radius: 15px;
@@ -108,6 +137,19 @@
     .right {
       width: 66%;
     }
+
+    .circle {
+      display: flex;
+      position: absolute;
+      bottom: 37px;
+      left: 544px !important;
+
+      img {
+        margin-right: 16px;
+        width: 11px;
+        height: 11px;
+      }
+    }
   }
 
   .content-02 {
@@ -137,7 +179,7 @@
         justify-content: space-between;
 
         li {
-          font-weight: 500;
+          font-weight: 400;
           font-size: 1.8rem;
           line-height: 180%;
           color: #c7c7c7;
@@ -391,6 +433,13 @@
 
     .content-01 {
       height: 444px;
+
+      .circle {
+        img {
+          width: 9px;
+          height: 9px;
+        }
+      }
     }
 
     .content-02 {
@@ -440,6 +489,16 @@
         width: 90% !important;
         height: unset !important;
       }
+
+      .circle {
+        bottom: 25px;
+        left: 450px !important;
+
+        img {
+          width: 8px;
+          height: 8px;
+        }
+      }
     }
 
     .content-02 {
@@ -479,7 +538,7 @@
 @media (max-width: 768px) {
   .news {
     .content {
-      width: 350px !important;
+      width: 320px !important;
     }
 
     .Navigation {
@@ -495,6 +554,10 @@
       left: 0;
       margin-top: 0;
       flex-direction: column;
+
+      .circle {
+        display: none;
+      }
 
       .cover {
         position: absolute;

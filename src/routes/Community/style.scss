@@ -8,14 +8,45 @@
   background: #f2f2f2;
   color: white;
 
+  .Navigation {
+    .navList {
+      .nav-community {
+        font-weight: 700;
+        text-decoration: overline;
+      }
+    }
+
+    .mobile-nav {
+      .nav-community {
+        color: #ffb800;
+      }
+      .ico-nav-community {
+        display: none;
+      }
+      .ico2-nav-discover {
+        display: none;
+      }
+      .ico2-nav-news {
+        display: none;
+      }
+      .ico2-nav-history {
+        display: none;
+      }
+      .ico2-nav-home {
+        display: none;
+      }
+    }
+  }
+
   .content {
     width: 1200px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
   }
 
   .background-img {
     width: 100%;
     height: 100vh;
+    min-height: 927px;
     background-repeat: none;
     background-image: url(../../images/background/community_back.png);
     background-position: center;
@@ -26,13 +57,14 @@
 
   .content-01 {
     position: absolute;
-    bottom: 15%;
+    top: 25%;
     left: 11%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 1;
     margin: 0 !important;
+    margin-bottom: 200px !important;
 
     .txt-mobile {
       display: none;
@@ -74,7 +106,7 @@
     flex-direction: column;
     align-items: center;
     height: 684px;
-    margin-top: calc(100vh + 100px);
+    margin-top: 927px;
 
     .title {
       font-weight: bold;
@@ -166,7 +198,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 100px 0;
+    margin-top: 50px;
+    margin-bottom: 100px;
 
     .txt-01 {
       font-weight: bold;
@@ -244,6 +277,10 @@
         background: white;
         border-radius: 15px;
 
+        .top {
+          height: 54.6%;
+        }
+
         .bottom {
           width: 85.4%;
           padding: 0 7.3%;
@@ -262,7 +299,7 @@
 
           .txt-02 {
             font-size: 1.6rem;
-            line-height: 19px;
+            line-height: 2.2rem;
             color: #999999;
           }
 
@@ -346,7 +383,7 @@
         }
 
         .post {
-          height: 490px;
+          height: 80%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -381,8 +418,6 @@
     }
 
     .content-01 {
-      bottom: 18%;
-      left: 9%;
       .details {
         margin-top: 150px !important;
         width: 436px !important;
@@ -409,6 +444,9 @@
 
 @media (max-width: 960px) {
   .community {
+    .background-img {
+      min-height: 800px !important;
+    }
     .content,
     .ad {
       width: 730px !important;
@@ -420,9 +458,6 @@
     }
 
     .content-01 {
-      bottom: 25% !important;
-      left: 5% !important;
-
       .details {
         margin-top: 100px !important;
         width: 436px !important;
@@ -431,6 +466,7 @@
     }
 
     .content-02 {
+      margin-top: 800px;
       height: 410.3px !important;
 
       .description {
@@ -477,7 +513,8 @@
     .background-img {
       background-size: cover;
       background-position: 35%;
-      height: 50vh;
+      height: 50vh !important;
+      min-height: 421px !important;
     }
 
     .content,
@@ -508,7 +545,10 @@
     .content-01 {
       width: 320px !important;
       height: unset !important;
-      bottom: 5% !important;
+      position: absolute;
+      top: unset !important;
+      bottom: 0 !important;
+      margin-bottom: unset !important;
       span {
         width: 100% !important;
       }
@@ -520,20 +560,21 @@
         font-size: 2.4rem;
       }
       .txt-02 {
-        font-size: 4.5rem;
+        font-size: 30px;
       }
       .txt-03 {
         display: none !important;
       }
       .details {
         width: 90% !important;
-        margin-top: 70px !important;
+        margin-top: 50px !important;
       }
     }
 
     .content-02 {
       height: 780px !important;
-      margin-top: calc(50vh + 70px);
+      // margin-top: calc(50vh + 70px);
+      margin-top: 521px;
       .tips {
         flex-direction: column;
 
