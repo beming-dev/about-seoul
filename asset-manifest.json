@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/about-seoul/static/css/main.0e53691c.chunk.css",
+    "main.css": "/about-seoul/static/css/main.b99f08ca.chunk.css",
     "main.js": "/about-seoul/static/js/main.bc1df0d7.chunk.js",
     "main.js.map": "/about-seoul/static/js/main.bc1df0d7.chunk.js.map",
     "runtime-main.js": "/about-seoul/static/js/runtime-main.351249c3.js",
@@ -8,14 +8,14 @@
     "static/js/2.016cd5ee.chunk.js": "/about-seoul/static/js/2.016cd5ee.chunk.js",
     "static/js/2.016cd5ee.chunk.js.map": "/about-seoul/static/js/2.016cd5ee.chunk.js.map",
     "index.html": "/about-seoul/index.html",
-    "static/css/main.0e53691c.chunk.css.map": "/about-seoul/static/css/main.0e53691c.chunk.css.map",
+    "static/css/main.b99f08ca.chunk.css.map": "/about-seoul/static/css/main.b99f08ca.chunk.css.map",
     "static/js/2.016cd5ee.chunk.js.LICENSE.txt": "/about-seoul/static/js/2.016cd5ee.chunk.js.LICENSE.txt",
     "static/media/style.scss": "/about-seoul/static/media/watchW.4361e5f1.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.351249c3.js",
     "static/js/2.016cd5ee.chunk.js",
-    "static/css/main.0e53691c.chunk.css",
+    "static/css/main.b99f08ca.chunk.css",
     "static/js/main.bc1df0d7.chunk.js"
   ]
 }
