@@ -45,11 +45,19 @@ const History = () => {
     mHistory.addEventListener("mouseup", onMouseUp);
     toTop.current.addEventListener("click", onTop);
 
+    mSlide.addEventListener("touchstart", onMouseDown, false);
+    mHistory.addEventListener("touchmove", onMouseMove, false);
+    mHistory.addEventListener("touchend", onMouseUp, false);
+
     return () => {
-      mSlide.removeEventListener("mousedown", onMouseDown);
-      mHistory.removeEventListener("mousemove", onMouseMove);
-      mHistory.removeEventListener("mouseup", onMouseUp);
+      mSlide.removeEventListener("touchstart", onMouseDown);
+      mHistory.removeEventListener("touchmove", onMouseMove);
+      mHistory.removeEventListener("touchend", onMouseUp);
       toTop.current.removeEventListener("click", onTop);
+
+      mSlide.removeEventListener("touchstart", onMouseDown);
+      mHistory.removeEventListener("touchmove", onMouseMove);
+      mHistory.removeEventListener("touchend", onMouseUp);
     };
   }, []);
 

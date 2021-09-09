@@ -36,6 +36,7 @@ const Community = () => {
             ))}
           </div>
         </div>
+        <img src="images/icons/scroll_down.png" alt="down" className="down" />
       </div>
 
       <div className="content-02 content">

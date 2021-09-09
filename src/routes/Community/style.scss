@@ -55,9 +55,16 @@
     z-index: 0;
   }
 
+  .down {
+    width: 49px;
+    height: 51.5px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+  }
   .content-01 {
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 11%;
     display: flex;
     flex-direction: column;
@@ -65,7 +72,6 @@
     z-index: 1;
     margin: 0 !important;
     margin-bottom: 200px !important;
-
     .txt-mobile {
       display: none;
       font-size: 1.8rem;
@@ -466,7 +472,7 @@
     }
 
     .content-02 {
-      margin-top: 800px;
+      margin-top: 900px;
       height: 410.3px !important;
 
       .description {
@@ -510,6 +516,9 @@
 
 @media (max-width: 768px) {
   .community {
+    .down {
+      display: none;
+    }
     .background-img {
       background-size: cover;
       background-position: 35%;
