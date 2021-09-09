@@ -92,6 +92,7 @@
 
       .written {
         display: flex;
+        margin-bottom: 10px !important;
 
         span {
           font-size: 1.2rem;
@@ -143,6 +144,7 @@
   .member {
     width: 42% !important;
     margin-right: 16px;
+    height: 215px !important;
 
     .back_img {
       height: 100.3px !important;

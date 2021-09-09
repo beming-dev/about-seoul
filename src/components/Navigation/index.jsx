@@ -66,7 +66,7 @@ const Navigation = ({ black }) => {
   ];
 
   return (
-    <nav className="Navigation">
+    <nav className={black ? "Navigation-black" : "Navigation"}>
       <div className="mobile-nav" style={mobileNavStyle}>
         <Link to="/signin">
           <div className="profile">

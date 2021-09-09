@@ -55,8 +55,8 @@ const History = () => {
 
   return (
     <div className="history" ref={history}>
+      <div className="history-bg"></div>
       <Scroll />
-
       <Navigation />
       <div className="content content-01">
         <span className="title">History of Seoul</span>
@@ -103,6 +103,13 @@ const History = () => {
           <img src="images/src/history-01.png" alt="player" className="img" />
           <div className="cover"></div>
           <img src="images/icons/play.png" alt="play" className="play" />
+        </div>
+        <div className="m-description">
+          The 2010 G20 Seoul Summit was the fifth meeting of the G20 heads of
+          government/heads of state, to discuss the global financial system and
+          the world economy, which took place in Seoul, South Korea, on November
+          11–12, 2010. South Korea was the first non-G8 nation to host a G20
+          leaders' summit.
         </div>
       </div>
       <div className="content content-03">

@@ -513,7 +513,7 @@
     .background-img {
       background-size: cover;
       background-position: 35%;
-      height: 50vh !important;
+      height: 421px !important;
       min-height: 421px !important;
     }
 
@@ -547,7 +547,8 @@
       height: unset !important;
       position: absolute;
       top: unset !important;
-      bottom: 0 !important;
+      bottom: 26px !important;
+      left: 5.5%;
       margin-bottom: unset !important;
       span {
         width: 100% !important;
@@ -567,6 +568,7 @@
       }
       .details {
         width: 90% !important;
+        height: unset !important;
         margin-top: 50px !important;
       }
     }
@@ -574,7 +576,8 @@
     .content-02 {
       height: 780px !important;
       // margin-top: calc(50vh + 70px);
-      margin-top: 521px;
+      margin-top: 400px;
+      margin-bottom: 0px;
       .tips {
         flex-direction: column;
 
@@ -589,9 +592,14 @@
     }
 
     .content-03 {
-      height: 320px !important;
+      height: fit-content !important;
+      margin-bottom: 0;
 
+      .description {
+        margin-bottom: 20px;
+      }
       .members {
+        height: fit-content;
         overflow-x: scroll;
       }
       .members {
@@ -603,6 +611,9 @@
       }
     }
 
+    .ad {
+      margin: 60px !important;
+    }
     .content-04 {
       height: unset !important;
 

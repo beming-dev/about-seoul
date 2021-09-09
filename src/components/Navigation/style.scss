@@ -1,4 +1,5 @@
-.Navigation {
+.Navigation,
+.Navigation-black {
   width: 77%;
   height: 48px;
   display: flex;
@@ -156,13 +157,15 @@
 }
 
 @media (max-width: 1200px) {
-  .Navigation {
+  .Navigation,
+  .Navigation-black {
     width: 85%;
   }
 }
 
 @media (max-width: 1024px) {
-  .Navigation {
+  .Navigation,
+  .Navigation-black {
     width: 90%;
 
     .logo {
@@ -187,8 +190,18 @@
 }
 
 @media (max-width: 768px) {
-  .Navigation {
+  .Navigation,
+  .Navigation-black {
     margin-top: 40px;
+
+    .logo {
+      width: 48px !important;
+      height: 20px !important;
+    }
+    .hamburger {
+      width: 21px !important;
+      height: 17px !important;
+    }
     .search {
       display: none;
     }

@@ -37,6 +37,7 @@ const News = () => {
   return (
     <div className="news">
       <Navigation black={true} />
+      <Navigation />
       <div className="content-01 content">
         <div className="cover"></div>
         <div className="left">
@@ -70,19 +71,32 @@ const News = () => {
       <div className="content-02 content">
         <div className="head">
           <span className="latest-article">Latest Articles</span>
-          <ul className="category">
-            {articleCategory.map((item, i) => {
-              return <li className={i === category ? "chosen" : ""}>{item}</li>;
-            })}
-            <div className="buttons">
-              <button className="prev" onClick={onCategoryClick("prev")}>
-                <img src="images/icons/prev2.png" alt="prev" />
-              </button>
-              <button className="next" onClick={onCategoryClick("next")}>
-                <img src="images/icons/next2.png" alt="next" />
-              </button>
-            </div>
-          </ul>
+          <div className="category-container">
+            <ul className="category">
+              {articleCategory.map((item, i) => {
+                return (
+                  <li
+                    className={i === category ? `chosen li-0${i}` : `li-0${i}`}
+                  >
+                    {item}
+                  </li>
+                );
+              })}
+              <img
+                src="images/icons/threeDot.svg"
+                alt="threedot"
+                className="three-dot"
+              />
+              <div className="buttons">
+                <button className="prev" onClick={onCategoryClick("prev")}>
+                  <img src="images/icons/prev2.png" alt="prev" />
+                </button>
+                <button className="next" onClick={onCategoryClick("next")}>
+                  <img src="images/icons/next2.png" alt="next" />
+                </button>
+              </div>
+            </ul>
+          </div>
         </div>
         <div className="divider">
           <div className="inner"></div>

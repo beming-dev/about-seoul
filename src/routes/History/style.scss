@@ -1,14 +1,21 @@
 .history {
   width: 100vw;
-  min-height: calc(100vw * 2700 / 1920);
-  background-image: url(../../images/background/history_bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+
+  .history-bg {
+    width: 100vw;
+    min-height: 2400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../images/background/history_bg.png);
+  }
 
   .Navigation {
     .navList {
@@ -184,6 +191,15 @@
       .play {
         z-index: 3;
       }
+    }
+
+    .m-description {
+      display: none;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 180%;
+      /* or 22px */
+      color: rgba(255, 255, 255, 0.6);
     }
   }
 
@@ -416,6 +432,10 @@
 
 @media (max-width: 768px) {
   .history {
+    .history-bg {
+      min-height: unset;
+      height: 1000px !important;
+    }
     .content {
       width: 340px;
       .title {
@@ -433,7 +453,7 @@
     }
 
     .content-01 {
-      margin-bottom: 150px;
+      margin: 50px 0;
       .line {
         width: 87px !important;
         height: 2px !important;
@@ -451,11 +471,13 @@
     .content-02 {
       margin-top: 100px;
       flex-direction: column;
+      .description {
+        display: none !important;
+      }
       select {
         width: 96px;
         height: 25.2px;
         top: -80px;
-        right: 10px;
         border-radius: 5px;
       }
       .background-text {
@@ -474,24 +496,31 @@
         height: unset;
       }
       .right {
-        margin-top: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         width: 100%;
-
         .play {
           width: 40px;
           height: 40px;
         }
       }
+      .m-description {
+        display: block;
+      }
     }
 
     .content-03 {
+      margin-top: 60px !important;
+      margin-bottom: 170px !important;
       .background {
         width: 100%;
         min-height: 198px;
         height: 198px;
-        top: 100px;
+        top: 90px;
       }
       .intro {
+        position: absolute;
+        top: 0;
         margin: 0;
         width: 100%;
         align-items: center;
@@ -541,6 +570,22 @@
           width: 100% !important;
           position: relative !important;
         }
+      }
+    }
+
+    .to-top {
+      display: none;
+      width: 69px;
+      height: 53px;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+      .ex {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 132%;
       }
     }
   }

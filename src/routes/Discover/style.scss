@@ -18,7 +18,7 @@
   position: relative;
   overflow: hidden;
 
-  .Navigation {
+  .Navigation-black {
     margin-bottom: 20px;
     .navList {
       .nav-discover {
@@ -662,7 +662,7 @@
     background-color: #f2f2f2;
     overflow: unset;
 
-    .Navigation {
+    .Navigation-black {
       margin-bottom: 100px !important;
       .navList {
         a {
@@ -679,7 +679,7 @@
       display: flex;
     }
 
-    .Navigation {
+    .Navigation-black {
       margin-bottom: 30px;
     }
     .bg {
@@ -703,7 +703,7 @@
 
 @media (max-width: 768px) {
   .discover {
-    .Navigation {
+    .Navigation-black {
       margin-bottom: 50px !important;
     }
     .mobile-content {

@@ -66,21 +66,31 @@
     position: unset !important;
     margin-bottom: 30px;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
+
+    img {
+      width: 54.6px !important;
+      height: 54.6px !important;
+    }
 
     .face {
       position: unset !important;
+      margin-left: 20px;
     }
 
     .field {
-      width: 60%;
+      width: 70%;
       padding: 0 !important;
     }
     .name {
       margin: 0 !important;
       padding: 0 !important;
+      margin-bottom: 5px !important;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
     }
     .about {
       display: none;
@@ -90,6 +100,10 @@
 
     .mAbout {
       display: block !important;
+      font-size: 12px;
+      line-height: 150%;
+      /* or 18px */
+      color: rgba(0, 0, 0, 0.5);
     }
   }
 }
